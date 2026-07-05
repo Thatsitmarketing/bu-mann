@@ -15,6 +15,8 @@ export const FAQ_KNOWLEDGE: FaqEntry[] = [
   {
     id: "oeffnungszeiten-hausgeraete",
     keywords: [
+      "öffnungszeiten",
+      "geöffnet",
       "öffnungszeiten hausgeräte",
       "wann habt ihr auf",
       "wann ist geöffnet",
@@ -97,7 +99,13 @@ export const FAQ_KNOWLEDGE: FaqEntry[] = [
   },
   {
     id: "heizungsausfall",
-    keywords: ["heizung ausgefallen", "heizung defekt", "keine heizung", "heizung springt nicht an"],
+    keywords: [
+      "heizung ausgefallen",
+      "heizung defekt",
+      "heizung kaputt",
+      "keine heizung",
+      "heizung springt nicht an",
+    ],
     answer:
       "Bei einem Heizungsausfall melden Sie sich am besten sofort telefonisch bei uns (02583 4664) – wir versuchen, kurzfristig einen Techniker zu schicken.",
   },
@@ -229,7 +237,13 @@ export const FAQ_KNOWLEDGE: FaqEntry[] = [
   // ---------- Photovoltaik ----------
   {
     id: "pv-kosten",
-    keywords: ["photovoltaik kosten", "pv anlage preis", "was kostet eine solaranlage"],
+    keywords: [
+      "photovoltaik",
+      "solaranlage",
+      "photovoltaik kosten",
+      "pv anlage preis",
+      "was kostet eine solaranlage",
+    ],
     answer:
       "Die Kosten einer PV-Anlage hängen von Dachfläche, gewünschter Leistung und Speicher ab. Am besten vereinbaren Sie einen kostenlosen Beratungstermin, dann können wir konkret kalkulieren.",
   },
@@ -272,7 +286,12 @@ export const FAQ_KNOWLEDGE: FaqEntry[] = [
   },
   {
     id: "wallbox-installation",
-    keywords: ["wallbox installieren", "wallbox einbauen lassen", "ladestation zuhause"],
+    keywords: [
+      "wallbox",
+      "wallbox installieren",
+      "wallbox einbauen lassen",
+      "ladestation zuhause",
+    ],
     answer:
       "Wir installieren Ihre Wallbox fachgerecht und abgestimmt auf Ihren Hausanschluss – auf Wunsch auch kombiniert mit Ihrer PV-Anlage.",
   },
@@ -318,7 +337,13 @@ export const FAQ_KNOWLEDGE: FaqEntry[] = [
   // ---------- Hausgeräte ----------
   {
     id: "hausgeraete-verkauf",
-    keywords: ["hausgeräte kaufen", "waschmaschine kaufen", "neues gerät kaufen", "backofen kaufen"],
+    keywords: [
+      "hausgeräte",
+      "hausgeräte kaufen",
+      "waschmaschine kaufen",
+      "neues gerät kaufen",
+      "backofen kaufen",
+    ],
     answer:
       "In unserem Ausstellungsraum finden Sie energieeffiziente Markengeräte führender Hersteller – inklusive persönlicher Beratung, Lieferung und Einweisung.",
   },
@@ -517,7 +542,7 @@ export const SUGGESTED_QUESTIONS = [
 ];
 
 const FALLBACK_ANSWER =
-  "Dazu habe ich leider noch keine passende Antwort. Rufen Sie uns gerne direkt unter 02583 4664 an oder schreiben Sie uns über unser Kontaktformular – wir helfen schnell weiter.";
+  "Das kann ich Ihnen leider nicht beantworten. Bitte wenden Sie sich direkt an unser Personal – telefonisch oder per WhatsApp unter 02583 4664, per E-Mail an info@bussmann-sassenberg.de oder über unser Kontaktformular. Unsere Mitarbeiter:innen helfen Ihnen gerne persönlich weiter.";
 
 /** Grobes Stemming für Deutsch: schneidet Wörter auf einen gemeinsamen Stamm,
  * damit z.B. "kostet"/"kosten" oder "ausbildungsplätze"/"ausbildungsplatz" matchen. */
@@ -555,14 +580,24 @@ export function matchAnswer(input: string): string {
 
   for (const entry of FAQ_KNOWLEDGE) {
     let score = 0;
+    // Ein Eintrag gilt nur dann als Treffer, wenn mindestens ein Stichwort
+    // vollständig vorkommt oder sich zwei Wörter überschneiden. Ein einzelnes
+    // Wort aus einer mehrteiligen Phrase (z.B. nur "Angebot") reicht nicht.
+    let qualifies = false;
     for (const kw of entry.keywords) {
       const kwTokens = tokenize(kw);
+      if (kwTokens.length === 0) continue;
       const overlap = kwTokens.filter((t) => inputTokens.has(t)).length;
-      // Vollständiger Phrasentreffer wird zusätzlich stark belohnt.
-      if (overlap === kwTokens.length && kwTokens.length > 0) score += overlap * 2;
-      else score += overlap;
+      const fullMatch = overlap === kwTokens.length;
+      if (fullMatch) {
+        score += overlap * 2;
+        qualifies = true;
+      } else {
+        score += overlap;
+        if (overlap >= 2) qualifies = true;
+      }
     }
-    if (score > 0 && (!best || score > best.score)) {
+    if (qualifies && (!best || score > best.score)) {
       best = { entry, score };
     }
   }
