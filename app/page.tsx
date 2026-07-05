@@ -7,6 +7,7 @@ import TeamSection from "@/components/TeamSection";
 import ProcessSection from "@/components/ProcessSection";
 import CareerTeaser from "@/components/CareerTeaser";
 import FaqSection from "@/components/FaqSection";
+import TestimonialSlider from "@/components/TestimonialSlider";
 import ContactSection from "@/components/ContactSection";
 
 export default function HomePage() {
@@ -54,6 +55,7 @@ export default function HomePage() {
       />
 
       <FaqSection />
+      <TestimonialSlider />
       <ContactSection />
     </>
   );
