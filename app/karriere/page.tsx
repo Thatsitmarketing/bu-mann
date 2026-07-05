@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import FadeTextCTA from "@/components/FadeTextCTA";
 import { ArrowRight } from "@/components/Icons";
+import { JOBS } from "@/lib/jobs";
 
 export const metadata: Metadata = {
   title: "Karriere & Ausbildung",
@@ -9,43 +11,19 @@ export const metadata: Metadata = {
     "Jobs mit Zukunft beim Meisterbetrieb Bußmann in Sassenberg: offene Stellen in Elektro, Heizung, Sanitär und Hausgeräte-Service – plus Ausbildungsplätze.",
 };
 
-const JOBS = [
-  {
-    tag: "Teilzeit · Verkauf",
-    title: "Kaufmännische:r Mitarbeiter:in Hausgeräte (m/w/d)",
-    text: "Beratung und Verkauf im Ausstellungsraum, Büroorganisation, Rechnungen, Angebote und Terminplanung – das Herz unseres Hausgeräte-Teams.",
-  },
-  {
-    tag: "Vollzeit · Projektleitung",
-    title: "Projektleiter:in / Meister:in / Kaufmännische Fachkraft (m/w/d)",
-    text: "Kundenkontakt und Projektverantwortung in Elektro, Heizung und Sanitär – idealerweise mit Meisterbrief und Erfahrung mit Photovoltaik und Wärmepumpen.",
-  },
-  {
-    tag: "Vollzeit · Elektro",
-    title: "Elektroniker:in für Energie- & Gebäudetechnik (m/w/d)",
-    text: "Abwechslungsreiche Installations- und Montagearbeiten, Wartung und Modernisierung – vom Einfamilienhaus bis zum Industrieprojekt.",
-  },
-  {
-    tag: "Vollzeit · SHK",
-    title: "Anlagenmechaniker:in Heizung/Sanitär (m/w/d)",
-    text: "Neubau, Sanierung und Wartung energieeffizienter Heiztechnik, Sanitäranlagen und Wellness-Bäder.",
-  },
-  {
-    tag: "Vollzeit · Kundendienst",
-    title: "Kundendiensttechniker:in Hausgeräte (m/w/d)",
-    text: "Montage, Reparatur und Fehlersuche an Hausgeräten – auch bei Einbaugeräten. Sie sind das Gesicht unseres Service.",
-  },
-];
-
 export default function KarrierePage() {
   return (
     <>
-      <section className="page-hero">
-        <div className="container">
+      <section
+        className="page-hero page-hero--media"
+        style={{ backgroundImage: "url(/images/ai/karriere-bg.png)" }}
+      >
+        <div className="page-hero__overlay" />
+        <div className="container page-hero__content">
           <Reveal>
-            <p className="eyebrow">Karriere bei Bußmann</p>
-            <h1 className="display">Handwerk mit Zukunft. Team mit Herz.</h1>
-            <p className="lead">
+            <p className="eyebrow eyebrow--light">Karriere bei Bußmann</p>
+            <h1 className="display display--light">Handwerk mit Zukunft. Team mit Herz.</h1>
+            <p className="lead lead--light">
               Ob erfahrene Fachkraft, Quereinsteiger:in oder Azubi: Bei uns arbeitest
               du an der Energiewende vor der eigenen Haustür – in einem
               Familienbetrieb, in dem man sich kennt und aufeinander verlässt.
@@ -54,24 +32,25 @@ export default function KarrierePage() {
         </div>
       </section>
 
-      <section className="section" style={{ paddingTop: 0 }}>
+      <section className="section" style={{ paddingTop: "3.5rem" }}>
         <div className="container">
           <Reveal>
             <div className="job-list">
               {JOBS.map((job) => (
-                <article className="job-card" key={job.title}>
-                  <div>
+                <Link href={`/karriere/${job.slug}`} className="job-card" key={job.slug}>
+                  <div className="job-card__media">
+                    <img src={job.image} alt="" loading="lazy" />
+                  </div>
+                  <div className="job-card__body">
                     <span className="tag">{job.tag}</span>
                     <h3 className="h3">{job.title}</h3>
-                    <p>{job.text}</p>
+                    <p>{job.summary}</p>
+                    <span className="job-card__salary">{job.salary}</span>
                   </div>
-                  <a
-                    className="btn btn--ghost"
-                    href="mailto:kpb@bussmann-sassenberg.de?subject=Bewerbung"
-                  >
-                    Jetzt bewerben <ArrowRight />
-                  </a>
-                </article>
+                  <span className="btn btn--ghost job-card__cta">
+                    Details ansehen <ArrowRight />
+                  </span>
+                </Link>
               ))}
             </div>
           </Reveal>
@@ -110,7 +89,7 @@ export default function KarrierePage() {
           { text: "initiativ.", accent: true },
         ]}
         ctaLabel="Initiativbewerbung senden"
-        ctaHref="mailto:kpb@bussmann-sassenberg.de?subject=Initiativbewerbung"
+        ctaHref="/karriere/initiativbewerbung"
       />
     </>
   );

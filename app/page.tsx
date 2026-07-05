@@ -4,6 +4,9 @@ import ServicesScroll from "@/components/ServicesScroll";
 import FadeTextCTA from "@/components/FadeTextCTA";
 import Stats from "@/components/Stats";
 import TeamSection from "@/components/TeamSection";
+import ProcessSection from "@/components/ProcessSection";
+import CareerTeaser from "@/components/CareerTeaser";
+import FaqSection from "@/components/FaqSection";
 import ContactSection from "@/components/ContactSection";
 
 export default function HomePage() {
@@ -28,7 +31,9 @@ export default function HomePage() {
       />
 
       <Stats />
+      <ProcessSection />
       <TeamSection />
+      <CareerTeaser />
 
       <FadeTextCTA
         variant="navy"
@@ -48,6 +53,7 @@ export default function HomePage() {
         ctaHref="/kontakt"
       />
 
+      <FaqSection />
       <ContactSection />
     </>
   );

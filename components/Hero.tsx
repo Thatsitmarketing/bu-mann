@@ -82,7 +82,11 @@ export default function Hero() {
         </div>
 
         <div className="hero__media">
-          <div className="hero__media-inner" />
+          <div
+            className="hero__media-inner"
+            style={{ backgroundImage: "url(/images/ai/hero-elektriker.png)" }}
+          />
+          <div className="hero__media-scrim" />
           <div className="hero__media-badges">
             <p className="big">
               Handwerk mit Zukunft –<br />
