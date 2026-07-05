@@ -4,7 +4,7 @@ import { useRef, useState, useEffect, useCallback } from "react";
 import { gsap, useGSAP } from "@/lib/gsap";
 import Reveal from "./Reveal";
 import GoogleIcon from "./GoogleIcon";
-import { TESTIMONIALS } from "@/lib/testimonials";
+import { TESTIMONIALS, type Testimonial } from "@/lib/testimonials";
 
 function initials(name: string) {
   return name
@@ -14,6 +14,53 @@ function initials(name: string) {
     .map((w) => w[0])
     .join("")
     .toUpperCase();
+}
+
+/** Einzelne Bewertungskarte: lange Texte werden geklappt, damit im
+ *  eingeklappten Zustand alle Karten dieselbe Höhe haben. */
+function TestimonialCard({ t }: { t: Testimonial }) {
+  const textRef = useRef<HTMLParagraphElement>(null);
+  const [expanded, setExpanded] = useState(false);
+  const [clampable, setClampable] = useState(false);
+
+  useEffect(() => {
+    const el = textRef.current;
+    if (!el) return;
+    const check = () =>
+      setClampable(el.scrollHeight - el.clientHeight > 4);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
+
+  return (
+    <article className="testimonial-card">
+      <div className="testimonial-card__head">
+        <div className="testimonial-card__avatar">{initials(t.name)}</div>
+        <div>
+          <strong>{t.name}</strong>
+          <span>{t.meta}</span>
+        </div>
+        <GoogleIcon size={20} />
+      </div>
+      <div className="testimonial-card__rating">
+        <span className="stars">{"★".repeat(t.rating)}</span>
+        <time>{t.time}</time>
+      </div>
+      <p ref={textRef} className={`testimonial-card__text ${expanded ? "is-expanded" : ""}`}>
+        {t.text}
+      </p>
+      {(clampable || expanded) && (
+        <button
+          type="button"
+          className="testimonial-card__more"
+          onClick={() => setExpanded((v) => !v)}
+        >
+          {expanded ? "weniger anzeigen" : "mehr anzeigen"}
+        </button>
+      )}
+    </article>
+  );
 }
 
 export default function TestimonialSlider() {
@@ -106,20 +153,7 @@ export default function TestimonialSlider() {
           <div className="testimonials__viewport">
             <div className="testimonials__track" ref={trackRef}>
               {TESTIMONIALS.map((t) => (
-                <article className="testimonial-card" key={t.name + t.time}>
-                  <div className="testimonial-card__head">
-                    <div className="testimonial-card__avatar">{initials(t.name)}</div>
-                    <div>
-                      <strong>{t.name}</strong>
-                      <span>{t.meta}</span>
-                    </div>
-                  </div>
-                  <div className="testimonial-card__rating">
-                    <span className="stars">{"★".repeat(t.rating)}</span>
-                    <time>{t.time}</time>
-                  </div>
-                  <p>{t.text}</p>
-                </article>
+                <TestimonialCard t={t} key={t.name + t.time} />
               ))}
             </div>
           </div>

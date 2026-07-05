@@ -9,12 +9,13 @@ const NAV = [
   { href: "/", label: "Startseite" },
   { href: "/hausgeraete", label: "Hausgeräte" },
   { href: "/energietechnik", label: "Energietechnik" },
+  { href: "/ueber-uns", label: "Über uns" },
   { href: "/karriere", label: "Karriere" },
   { href: "/kontakt", label: "Kontakt" },
 ];
 
 // Seiten mit dunklem Bild-Hero: dort wird der transparente Header hell dargestellt.
-const DARK_HERO_ROUTES = ["/hausgeraete", "/energietechnik", "/karriere"];
+const DARK_HERO_ROUTES = ["/hausgeraete", "/energietechnik", "/ueber-uns", "/karriere"];
 
 export default function Header() {
   const pathname = usePathname();

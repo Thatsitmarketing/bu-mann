@@ -53,6 +53,14 @@ export default function TeamSection() {
           <h2 className="h2">Menschen, die anpacken. Für Sie da.</h2>
         </div>
 
+        <figure className="team__photo">
+          <img
+            src="/images/photos/team.jpg"
+            alt="Das Team von Bußmann Sassenberg vor den Firmenfahrzeugen"
+            loading="lazy"
+          />
+        </figure>
+
         <div className="team__grid">
           {TEAM.map((m) => (
             <article className="team-card" key={m.name}>

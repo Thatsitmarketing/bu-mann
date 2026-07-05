@@ -1,5 +1,11 @@
+export type JobCategory =
+  | "Handwerk & Technik"
+  | "Kaufmännisch & Leitung"
+  | "Ausbildung";
+
 export type Job = {
   slug: string;
+  category: JobCategory;
   tag: string;
   title: string;
   image: string;
@@ -11,12 +17,20 @@ export type Job = {
   benefits: string[];
 };
 
+/** Reihenfolge der Kategorien in der Karriere-Übersicht. */
+export const JOB_CATEGORIES: JobCategory[] = [
+  "Handwerk & Technik",
+  "Kaufmännisch & Leitung",
+  "Ausbildung",
+];
+
 export const JOBS: Job[] = [
   {
     slug: "kaufmaennische-mitarbeiterin-hausgeraete",
+    category: "Kaufmännisch & Leitung",
     tag: "Teilzeit · Verkauf",
     title: "Kaufmännische:r Mitarbeiter:in Hausgeräte (m/w/d)",
-    image: "/images/ai/module-hausgeraete.png",
+    image: "/images/ai/hausgeraete-hero.png",
     salary: "1.500 – 2.000 € brutto / Monat (Teilzeit)",
     summary:
       "Beratung und Verkauf im Ausstellungsraum, Büroorganisation, Rechnungen, Angebote und Terminplanung – das Herz unseres Hausgeräte-Teams.",
@@ -43,9 +57,10 @@ export const JOBS: Job[] = [
   },
   {
     slug: "projektleitung-meister",
+    category: "Kaufmännisch & Leitung",
     tag: "Vollzeit · Projektleitung",
     title: "Projektleiter:in / Meister:in / Kaufmännische Fachkraft (m/w/d)",
-    image: "/images/ai/hero-elektriker.png",
+    image: "/images/photos/waermepumpe-beratung.jpg",
     salary: "3.800 – 5.200 € brutto / Monat",
     summary:
       "Kundenkontakt und Projektverantwortung in Elektro, Heizung und Sanitär – idealerweise mit Meisterbrief und Erfahrung mit Photovoltaik und Wärmepumpen.",
@@ -72,9 +87,10 @@ export const JOBS: Job[] = [
   },
   {
     slug: "elektroniker-energie-gebaeudetechnik",
+    category: "Handwerk & Technik",
     tag: "Vollzeit · Elektro",
     title: "Elektroniker:in für Energie- & Gebäudetechnik (m/w/d)",
-    image: "/images/ai/module-elektro.png",
+    image: "/images/ai/hero-elektriker.png",
     salary: "3.200 – 4.200 € brutto / Monat",
     summary:
       "Abwechslungsreiche Installations- und Montagearbeiten, Wartung und Modernisierung – vom Einfamilienhaus bis zum Industrieprojekt.",
@@ -101,9 +117,10 @@ export const JOBS: Job[] = [
   },
   {
     slug: "anlagenmechaniker-heizung-sanitaer",
+    category: "Handwerk & Technik",
     tag: "Vollzeit · SHK",
     title: "Anlagenmechaniker:in Heizung/Sanitär (m/w/d)",
-    image: "/images/gallery/bad-waschtisch-03.jpg",
+    image: "/images/photos/heizungsinstallation.jpg",
     salary: "3.200 – 4.300 € brutto / Monat",
     summary:
       "Neubau, Sanierung und Wartung energieeffizienter Heiztechnik, Sanitäranlagen und Wellness-Bäder.",
@@ -130,9 +147,10 @@ export const JOBS: Job[] = [
   },
   {
     slug: "kundendiensttechniker-hausgeraete",
+    category: "Handwerk & Technik",
     tag: "Vollzeit · Kundendienst",
     title: "Kundendiensttechniker:in Hausgeräte (m/w/d)",
-    image: "/images/ai/module-hausgeraete.png",
+    image: "/images/photos/gastherme-wartung.jpg",
     salary: "2.900 – 3.800 € brutto / Monat",
     summary:
       "Montage, Reparatur und Fehlersuche an Hausgeräten – auch bei Einbaugeräten. Sie sind das Gesicht unseres Service.",
@@ -159,9 +177,10 @@ export const JOBS: Job[] = [
   },
   {
     slug: "ausbildung-elektroniker",
+    category: "Ausbildung",
     tag: "Ausbildung · Elektro",
     title: "Ausbildung Elektroniker:in für Energie- & Gebäudetechnik (m/w/d)",
-    image: "/images/legacy/karriere-ausbildung-flyer.jpg",
+    image: "/images/ai/hero-elektriker.png",
     salary: "780 – 1.000 € Ausbildungsvergütung / Monat (steigend je Lehrjahr)",
     summary:
       "Du hast Interesse an Technik, Strom und smarter Gebäudetechnik? Dann bist du bei uns richtig.",
@@ -188,9 +207,10 @@ export const JOBS: Job[] = [
   },
   {
     slug: "ausbildung-shk",
+    category: "Ausbildung",
     tag: "Ausbildung · SHK",
     title: "Ausbildung Anlagenmechaniker:in Sanitär-, Heizungs- & Klimatechnik (m/w/d)",
-    image: "/images/ai/karriere-bg.png",
+    image: "/images/photos/waermepumpe-wartung.jpg",
     salary: "780 – 1.000 € Ausbildungsvergütung / Monat (steigend je Lehrjahr)",
     summary:
       "Du packst gerne mit an und sorgst dafür, dass es warm, sauber und komfortabel bleibt? Dann komm in unser Team!",

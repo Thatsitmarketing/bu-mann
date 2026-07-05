@@ -129,8 +129,8 @@ export default function ServicesScroll() {
               <div>
                 <h3 className="h3">{s.title}</h3>
                 <p>{s.text}</p>
-                <Link href={s.href}>
-                  Mehr erfahren <ArrowRight size={15} />
+                <Link href={s.href} className="btn btn--primary service-card__cta">
+                  Jetzt anfragen <ArrowRight size={16} />
                 </Link>
               </div>
             </article>

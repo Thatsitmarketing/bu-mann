@@ -33,6 +33,7 @@ export default function Footer() {
           <div>
             <h4>Unternehmen</h4>
             <ul>
+              <li><Link href="/ueber-uns">Über uns</Link></li>
               <li><Link href="/karriere">Karriere</Link></li>
               <li><Link href="/karriere">Ausbildung</Link></li>
               <li><Link href="/kontakt">Kontakt</Link></li>
