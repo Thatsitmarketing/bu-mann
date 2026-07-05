@@ -2,7 +2,6 @@ import Hero from "@/components/Hero";
 import BrandMarquee from "@/components/BrandMarquee";
 import ServicesScroll from "@/components/ServicesScroll";
 import FadeTextCTA from "@/components/FadeTextCTA";
-import Stats from "@/components/Stats";
 import TeamSection from "@/components/TeamSection";
 import ProcessSection from "@/components/ProcessSection";
 import CareerTeaser from "@/components/CareerTeaser";
@@ -31,7 +30,7 @@ export default function HomePage() {
         ctaHref="/kontakt"
       />
 
-      <Stats />
+      <TestimonialSlider />
       <ProcessSection />
       <TeamSection />
       <CareerTeaser />
@@ -55,7 +54,6 @@ export default function HomePage() {
       />
 
       <FaqSection />
-      <TestimonialSlider />
       <ContactSection />
     </>
   );
