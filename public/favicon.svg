@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <!-- White background -->
+  <rect width="256" height="256" fill="white"/>
+
+  <!-- Red left section -->
+  <rect x="0" y="0" width="128" height="256" fill="#C42E32"/>
+
+  <!-- Blue right section -->
+  <rect x="128" y="0" width="128" height="256" fill="#193454"/>
+
+  <!-- White "B" monogram -->
+  <text x="128" y="200" font-size="180" font-weight="bold" font-family="Arial, sans-serif" fill="white" text-anchor="middle">B</text>
+</svg>
