@@ -407,6 +407,13 @@ h1, h2, h3 {
   gap: 0.7rem;
 }
 
+.hero__trust-google {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
 .hero__trust strong {
   color: var(--navy);
   font-size: 1.05rem;

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useRef } from "react";
 import { gsap, useGSAP } from "@/lib/gsap";
-import { ArrowRight } from "./Icons";
+import { ArrowRight, GoogleIcon } from "./Icons";
 
 export default function Hero() {
   const root = useRef<HTMLElement>(null);
@@ -71,6 +71,9 @@ export default function Hero() {
                 Beratung anfragen <ArrowRight />
               </Link>
               <div className="hero__trust">
+                <span className="hero__trust-google" aria-label="Google">
+                  <GoogleIcon size={22} />
+                </span>
                 <div>
                   <strong>Meisterbetrieb</strong> <span className="stars">★★★★★</span>
                   <br />
