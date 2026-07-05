@@ -7,9 +7,7 @@ export default function Footer() {
         <div className="footer__grid">
           <div className="footer__brand">
             <Link href="/" className="logo">
-              <span className="logo__mark">
-                B<span>.</span>
-              </span>
+              <img src="/images/logo-icon.png" alt="" className="logo__mark" aria-hidden="true" />
               <span>
                 Bußmann
                 <small>Sassenberg · Meisterbetrieb</small>

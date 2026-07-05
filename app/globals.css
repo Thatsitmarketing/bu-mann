@@ -211,8 +211,7 @@ h1, h2, h3 {
 }
 
 .header--over-dark .logo__mark {
-  background: rgba(255, 255, 255, 0.16);
-  backdrop-filter: blur(4px);
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.35));
 }
 
 .header--over-dark .nav a {
@@ -241,19 +240,10 @@ h1, h2, h3 {
 }
 
 .logo__mark {
-  width: 40px;
-  height: 40px;
-  border-radius: 12px;
-  background: var(--navy);
-  color: var(--white);
-  display: grid;
-  place-items: center;
-  font-size: 1.05rem;
-  font-weight: 800;
-}
-
-.logo__mark span {
-  color: #e79a9d;
+  width: 42px;
+  height: auto;
+  flex: 0 0 auto;
+  object-fit: contain;
 }
 
 .logo small {
