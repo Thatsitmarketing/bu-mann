@@ -3,13 +3,13 @@
 import { useRef } from "react";
 import { gsap, useGSAP } from "@/lib/gsap";
 
-type Module = {
+export type Module = {
   title: string;
   text: string;
   image: string;
 };
 
-const MODULES: Module[] = [
+const DEFAULT_MODULES: Module[] = [
   {
     title: "Elektrotechnik",
     text: "Gebäudeinstallationen für Neubau, Sanierung und Industrie – inklusive Kernbohrungen und Materialverkauf ab Lager.",
@@ -43,8 +43,9 @@ const MODULES: Module[] = [
 ];
 
 /** Interaktives Modul-Raster mit Scroll-Reveal und Hover-Animation je Leistung. */
-export default function ServiceModules() {
+export default function ServiceModules({ modules }: { modules?: Module[] }) {
   const root = useRef<HTMLDivElement>(null);
+  const items = modules ?? DEFAULT_MODULES;
 
   useGSAP(
     () => {
@@ -78,7 +79,7 @@ export default function ServiceModules() {
 
   return (
     <div className="module-grid" ref={root}>
-      {MODULES.map((m) => (
+      {items.map((m) => (
         <article className="module-card" key={m.title}>
           <div className="module-card__media">
             <img src={m.image} alt={m.title} className="module-card__img" loading="lazy" />

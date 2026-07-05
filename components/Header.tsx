@@ -13,10 +13,15 @@ const NAV = [
   { href: "/kontakt", label: "Kontakt" },
 ];
 
+// Seiten mit dunklem Bild-Hero: dort wird der transparente Header hell dargestellt.
+const DARK_HERO_ROUTES = ["/hausgeraete", "/energietechnik", "/karriere"];
+
 export default function Header() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+
+  const overDark = DARK_HERO_ROUTES.includes(pathname);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -38,7 +43,11 @@ export default function Header() {
 
   return (
     <>
-      <header className={`header ${scrolled ? "header--scrolled" : ""}`}>
+      <header
+        className={`header ${scrolled ? "header--scrolled" : ""} ${
+          overDark && !scrolled ? "header--over-dark" : ""
+        }`}
+      >
         <div className="container header__inner">
           <Link href="/" className="logo" aria-label="Bußmann Sassenberg – Startseite">
             <span className="logo__mark">

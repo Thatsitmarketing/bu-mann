@@ -51,15 +51,14 @@ export default function ProcessSection() {
   );
 
   return (
-    <section
-      className="section process"
-      style={{ backgroundImage: "url(/images/ai/process-bg.png)" }}
-      ref={root}
-    >
+    <section className="section process" ref={root}>
       <div className="container">
         <Reveal>
-          <p className="eyebrow eyebrow--center">So arbeiten wir</p>
-          <h2 className="h2" style={{ textAlign: "center", marginInline: "auto", maxWidth: "18ch" }}>
+          <p className="eyebrow eyebrow--center eyebrow--light">So arbeiten wir</p>
+          <h2
+            className="h2 display--light"
+            style={{ textAlign: "center", marginInline: "auto", maxWidth: "18ch" }}
+          >
             Vom ersten Anruf bis zur Wartung danach.
           </h2>
         </Reveal>

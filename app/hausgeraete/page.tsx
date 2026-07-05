@@ -3,7 +3,7 @@ import Reveal from "@/components/Reveal";
 import FadeTextCTA from "@/components/FadeTextCTA";
 import ContactSection from "@/components/ContactSection";
 import BrandMarquee from "@/components/BrandMarquee";
-import { WashIcon, WrenchIcon, HomeIcon } from "@/components/Icons";
+import ServiceModules, { type Module } from "@/components/ServiceModules";
 
 export const metadata: Metadata = {
   title: "Hausgeräte – Verkauf, Beratung & Reparatur",
@@ -11,33 +11,54 @@ export const metadata: Metadata = {
     "Energieeffiziente Markengeräte, persönliche Beratung im Ausstellungsraum und ein eigener Kundendienst: Hausgeräte von Bußmann Sassenberg.",
 };
 
-const FEATURES = [
+const MODULES: Module[] = [
   {
-    icon: <WashIcon />,
-    title: "Verkauf von Klein- & Großgeräten",
-    text: "Waschmaschine, Geschirrspüler, Backofen oder Kaffeevollautomat: In unserem Ausstellungsraum finden Sie energieeffiziente Qualitätsgeräte führender Markenhersteller – zum Anfassen und Vergleichen.",
+    title: "Waschen & Trocknen",
+    text: "Energieeffiziente Waschmaschinen, Trockner und Waschtrockner führender Marken – für saubere Wäsche ohne hohe Stromrechnung.",
+    image: "/images/ai/module-hausgeraete.png",
   },
   {
-    icon: <WrenchIcon />,
-    title: "Eigener Kundendienst & Reparatur",
-    text: "Unser werkseigener Kundendienst findet und behebt Defekte auch bei Einbaugeräten – schnell, ehrlich und fair. Reparieren statt wegwerfen, wann immer es sich lohnt.",
+    title: "Kühlen & Gefrieren",
+    text: "Kühlschränke, Gefrierschränke und Kühl-Gefrier-Kombis in allen Größen – sparsam, leise und langlebig.",
+    image: "/images/ai/module-kuehlen.png",
   },
   {
-    icon: <HomeIcon />,
-    title: "Lieferung, Montage & Einweisung",
-    text: "Wir liefern Ihr neues Gerät, schließen es fachgerecht an und erklären Ihnen alle Funktionen. Ihr Altgerät entsorgen wir kostenlos – und Parkplätze gibt es direkt am Haus.",
+    title: "Kochen & Backen",
+    text: "Herde, Backöfen, Kochfelder und Dunstabzüge – zum Anfassen und Vergleichen in unserem Ausstellungsraum.",
+    image: "/images/ai/module-kochen.png",
+  },
+  {
+    title: "Geschirrspülen",
+    text: "Geschirrspüler als Einbau- oder Standgerät – wassersparend und flüsterleise, fachgerecht angeschlossen.",
+    image: "/images/ai/module-spuelen.png",
+  },
+  {
+    title: "Kleingeräte",
+    text: "Kaffeevollautomaten, Staubsauger und viele weitere Kleingeräte für den Alltag – mit ehrlicher Beratung.",
+    image: "/images/ai/module-kleingeraete.png",
+  },
+  {
+    title: "Lieferung & Kundendienst",
+    text: "Wir liefern, montieren und weisen ein – und unser eigener Kundendienst repariert auch Einbaugeräte.",
+    image: "/images/ai/module-lieferung.png",
   },
 ];
 
 export default function HausgeraetePage() {
   return (
     <>
-      <section className="page-hero">
-        <div className="container">
+      <section
+        className="page-hero page-hero--media"
+        style={{ backgroundImage: "url(/images/ai/hausgeraete-hero.png)" }}
+      >
+        <div className="page-hero__overlay" />
+        <div className="container page-hero__content">
           <Reveal>
-            <p className="eyebrow">Hausgeräte in Sassenberg</p>
-            <h1 className="display">Markengeräte. Ehrliche Beratung. Echter Service.</h1>
-            <p className="lead">
+            <p className="eyebrow eyebrow--light">Hausgeräte in Sassenberg</p>
+            <h1 className="display display--light">
+              Markengeräte. Ehrliche Beratung. Echter Service.
+            </h1>
+            <p className="lead lead--light">
               Bei uns kaufen Sie kein Gerät von der Stange, sondern die Lösung, die zu
               Ihrem Haushalt passt – mit Beratung vor Ort, Lieferung, Einbau und einem
               Kundendienst, der auch nach dem Kauf für Sie da ist.
@@ -46,19 +67,15 @@ export default function HausgeraetePage() {
         </div>
       </section>
 
-      <section className="section" style={{ paddingTop: 0 }}>
+      <section className="section" style={{ paddingTop: "3.5rem" }}>
         <div className="container">
           <Reveal>
-            <div className="feature-grid">
-              {FEATURES.map((f) => (
-                <article className="feature-card" key={f.title}>
-                  <div className="ico">{f.icon}</div>
-                  <h3 className="h3">{f.title}</h3>
-                  <p>{f.text}</p>
-                </article>
-              ))}
-            </div>
+            <p className="eyebrow">Unser Sortiment</p>
+            <h2 className="h2" style={{ maxWidth: "20ch", marginBottom: "3rem" }}>
+              Für jeden Raum das passende Gerät.
+            </h2>
           </Reveal>
+          <ServiceModules modules={MODULES} />
         </div>
       </section>
 
