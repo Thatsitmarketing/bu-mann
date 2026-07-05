@@ -34,3 +34,15 @@ npm run build  # Produktions-Build
 
 Hinweis: Das Kontaktformular ist client-seitig vorbereitet und muss noch an
 einen Mail-Dienst bzw. ein Backend angebunden werden.
+
+## Deployment (Cloudflare Pages)
+
+Das Projekt läuft über `@cloudflare/next-on-pages`. Die `wrangler.toml` setzt
+das nötige `nodejs_compat`-Flag bereits im Code. Falls das Pages-Projekt schon
+existiert und der Fehler *"Node.JS Compatibility Error – no nodejs_compat
+compatibility flag set"* auftritt, muss das Flag zusätzlich einmalig im
+Cloudflare-Dashboard nachgezogen werden:
+
+**Pages-Projekt → Settings → Functions → Compatibility Flags** → für
+*Production* und *Preview* jeweils `nodejs_compat` hinzufügen und neu
+deployen.
