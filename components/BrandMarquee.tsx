@@ -70,7 +70,6 @@ export default function BrandMarquee() {
                 <img
                   src={brand.src}
                   alt={duplicate ? "" : `${brand.name} Logo`}
-                  loading="lazy"
                   decoding="async"
                   style={brand.scale ? { transform: `scale(${brand.scale})` } : undefined}
                 />

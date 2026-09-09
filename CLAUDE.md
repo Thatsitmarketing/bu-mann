@@ -107,9 +107,26 @@ Datei mit gleichem Namen ersetzen, optische Größe über `scale` im Array
 
 ## Deployment
 
-Cloudflare Pages mit `@cloudflare/next-on-pages`. Die `wrangler.toml` setzt
-`nodejs_compat`. Tritt der Fehler *"Node.JS Compatibility Error"* auf, muss
-das Flag einmalig im Dashboard unter
+Cloudflare Pages führt `npm clean-install` aus und danach den Buildbefehl
+`npx @cloudflare/next-on-pages@1`. Die `wrangler.toml` setzt `nodejs_compat`.
+
+**Buildkette ist bewusst gepinnt.** Die drei Pakete stehen exakt in den
+devDependencies, damit `npx` die lokale Installation benutzt statt beim Build
+frisch aufzulösen:
+
+| Paket | Pin | Grund |
+| --- | --- | --- |
+| `@cloudflare/next-on-pages` | `1.13.16` | letzte 1.x, verlangt `next <= 15.5.2` |
+| `wrangler` | `4.100.0` | ab 4.110 verlangt wrangler `@cloudflare/workers-types@^5`, next-on-pages aber `^4` |
+| `vercel` | `47.0.4` | Peer von next-on-pages, Obergrenze `<= 47.0.4` |
+
+`next` steht auf `^15.3.4` und ist über die `package-lock.json` auf `15.4.11`
+aufgelöst, weil next-on-pages nur bis `15.5.2` unterstützt. Die Lockdatei
+gehört deshalb zwingend ins Repository. Wer eines dieser Pakete anhebt, muss
+`npx @cloudflare/next-on-pages@1` lokal durchlaufen lassen, bevor gepusht wird.
+
+Tritt der Fehler *"Node.JS Compatibility Error"* auf, muss das Flag einmalig
+im Dashboard unter
 **Pages Projekt → Settings → Functions → Compatibility Flags** für Production
 und Preview gesetzt werden.
 
