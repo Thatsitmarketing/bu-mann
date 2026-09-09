@@ -33,7 +33,7 @@ export default function Hero() {
           "-=0.6"
         );
 
-      // Sanfter Parallax-Effekt auf der Hero-Fläche
+      // Sanfter Parallaxeffekt auf der Herofläche
       gsap.to(".hero__media-inner", {
         yPercent: 14,
         ease: "none",

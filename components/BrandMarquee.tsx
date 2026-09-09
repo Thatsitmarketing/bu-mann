@@ -36,7 +36,7 @@ export default function BrandMarquee() {
       const track = root.current?.querySelector(".marquee__track");
       if (!track) return;
       if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-      // Endlos-Lauf: die Liste ist doppelt gerendert, -50% ergibt eine nahtlose Schleife
+      // Endlosschleife: die Liste ist doppelt gerendert, -50% ergibt eine nahtlose Schleife
       gsap.to(track, {
         xPercent: -50,
         duration: 40,

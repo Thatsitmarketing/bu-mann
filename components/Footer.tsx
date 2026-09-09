@@ -15,7 +15,7 @@ export default function Footer() {
             </Link>
             <p>
               Ihr moderner Meisterbetrieb aus Sassenberg für Hausgeräte, Elektro,
-              Heizung, Sanitär, Photovoltaik, Smart Home und E-Mobilität.
+              Heizung, Sanitär, Photovoltaik, Smart Home und Elektromobilität.
             </p>
           </div>
 
@@ -26,7 +26,7 @@ export default function Footer() {
               <li><Link href="/energietechnik">Elektrotechnik</Link></li>
               <li><Link href="/energietechnik">Heizung &amp; Sanitär</Link></li>
               <li><Link href="/energietechnik">Photovoltaik</Link></li>
-              <li><Link href="/energietechnik">E-Mobilität</Link></li>
+              <li><Link href="/energietechnik">Elektromobilität</Link></li>
             </ul>
           </div>
 

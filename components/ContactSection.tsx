@@ -10,7 +10,7 @@ export default function ContactSection({ id = "kontakt-formular" }: { id?: strin
 
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    // Hinweis: Hier später an ein Backend / einen Mail-Dienst anbinden.
+    // Hinweis: Hier später an ein Backend / einen Maildienst anbinden.
     setSent(true);
   }
 
@@ -43,7 +43,7 @@ export default function ContactSection({ id = "kontakt-formular" }: { id?: strin
             <div className="contact__info-item">
               <span className="ico"><MailIcon /></span>
               <div>
-                <strong>E-Mail</strong>
+                <strong>Mail</strong>
                 <a href="mailto:info@bussmann-sassenberg.de">info@bussmann-sassenberg.de</a>
               </div>
             </div>
@@ -74,7 +74,7 @@ export default function ContactSection({ id = "kontakt-formular" }: { id?: strin
               <input id="name" name="name" type="text" required placeholder="Max Mustermann" />
             </div>
             <div className="form__field">
-              <label htmlFor="email">E-Mail*</label>
+              <label htmlFor="email">Mailadresse*</label>
               <input id="email" name="email" type="email" required placeholder="max@beispiel.de" />
             </div>
             <div className="form__field">
@@ -90,7 +90,7 @@ export default function ContactSection({ id = "kontakt-formular" }: { id?: strin
                 <option>Heizung / Wärmepumpe</option>
                 <option>Sanitär / Bad</option>
                 <option>Photovoltaik / Speicher</option>
-                <option>E-Mobilität / Wallbox</option>
+                <option>Elektromobilität / Wallbox</option>
                 <option>Smart Home</option>
                 <option>Sonstiges</option>
               </select>

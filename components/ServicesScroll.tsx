@@ -52,9 +52,9 @@ const SERVICES: Service[] = [
     icon: <SunIcon />,
   },
   {
-    word: "E-Mobilität.",
-    title: "E-Mobilität & Wallboxen",
-    text: "Laden Sie Ihr E-Auto bequem zu Hause. Wir installieren Ihre Wallbox fachgerecht und binden sie auf Wunsch in Ihre Photovoltaikanlage ein.",
+    word: "Elektromobilität.",
+    title: "Elektromobilität & Wallboxen",
+    text: "Laden Sie Ihr Elektroauto bequem zu Hause. Wir installieren Ihre Wallbox fachgerecht und binden sie auf Wunsch in Ihre Photovoltaikanlage ein.",
     href: "/energietechnik",
     icon: <CarIcon />,
   },
@@ -75,7 +75,7 @@ const SERVICES: Service[] = [
 ];
 
 /**
- * Sticky-Sektion: Links bleibt die Überschrift stehen, das rote Wort
+ * Sticky Sektion: Links bleibt die Überschrift stehen, das rote Wort
  * wechselt passend zur Leistung, die rechts gerade durchgescrollt wird.
  */
 export default function ServicesScroll() {

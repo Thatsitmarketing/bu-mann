@@ -17,7 +17,7 @@ export default function DatenschutzPage() {
           <br />
           Bußmann GmbH &amp; Co. KG, Lappenbrink 29, 48336 Sassenberg
           <br />
-          Telefon: 02583 4664 · E-Mail: info@bussmann-sassenberg.de
+          Telefon: 02583 4664 · Mail: info@bussmann-sassenberg.de
         </p>
 
         <h2>2. Allgemeine Hinweise</h2>
@@ -30,9 +30,9 @@ export default function DatenschutzPage() {
 
         <h2>3. Datenerfassung auf dieser Website</h2>
         <p>
-          Beim Aufruf dieser Website werden durch den Hosting-Anbieter
-          automatisch Informationen in sogenannten Server-Log-Dateien erfasst
-          (z.&nbsp;B. Browsertyp, Betriebssystem, Referrer-URL, Uhrzeit der
+          Beim Aufruf dieser Website werden durch den Hostinganbieter
+          automatisch Informationen in sogenannten Logdateien des Servers erfasst
+          (z.&nbsp;B. Browsertyp, Betriebssystem, Referrer URL, Uhrzeit der
           Anfrage). Diese Daten sind nicht bestimmten Personen zuordenbar und
           dienen der technischen Sicherheit und Stabilität der Website
           (Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO).
@@ -40,8 +40,8 @@ export default function DatenschutzPage() {
 
         <h2>4. Kontaktformular und Kontaktaufnahme</h2>
         <p>
-          Wenn Sie uns über das Kontaktformular, per E-Mail oder telefonisch
-          Anfragen zukommen lassen, werden Ihre Angaben (Name, E-Mail-Adresse,
+          Wenn Sie uns über das Kontaktformular, per Mail oder telefonisch
+          Anfragen zukommen lassen, werden Ihre Angaben (Name, Mailadresse,
           Telefonnummer, Nachricht) zur Bearbeitung der Anfrage und für
           Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne
           Ihre Einwilligung weiter (Rechtsgrundlage: Art. 6 Abs. 1 lit. b
@@ -50,7 +50,7 @@ export default function DatenschutzPage() {
 
         <h2>5. Bewerbungen</h2>
         <p>
-          Bewerbungsunterlagen, die Sie uns per E-Mail oder Post zusenden,
+          Bewerbungsunterlagen, die Sie uns per Mail oder Post zusenden,
           verarbeiten wir ausschließlich zur Durchführung des
           Bewerbungsverfahrens (Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO,
           § 26 BDSG). Nach Abschluss des Verfahrens werden die Unterlagen
@@ -70,15 +70,15 @@ export default function DatenschutzPage() {
         </ul>
         <p>
           Außerdem haben Sie das Recht, sich bei der zuständigen
-          Datenschutz-Aufsichtsbehörde zu beschweren (Landesbeauftragte für
+          Datenschutzaufsichtsbehörde zu beschweren (Landesbeauftragte für
           Datenschutz und Informationsfreiheit Nordrhein-Westfalen).
         </p>
 
-        <h2>7. SSL-/TLS-Verschlüsselung</h2>
+        <h2>7. Verschlüsselung über SSL und TLS</h2>
         <p>
           Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung
-          vertraulicher Inhalte eine SSL-/TLS-Verschlüsselung. Eine
-          verschlüsselte Verbindung erkennen Sie an dem Schloss-Symbol in Ihrer
+          vertraulicher Inhalte eine Verschlüsselung über SSL und TLS. Eine
+          verschlüsselte Verbindung erkennen Sie an dem Schlosssymbol in Ihrer
           Browserzeile.
         </p>
       </div>

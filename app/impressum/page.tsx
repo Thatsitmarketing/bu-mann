@@ -26,7 +26,7 @@ export default function ImpressumPage() {
           <br />
           Telefon Energietechnik: 02583 4318
           <br />
-          E-Mail: info@bussmann-sassenberg.de
+          Mail: info@bussmann-sassenberg.de
         </p>
 
         <h2>Vertreten durch</h2>
@@ -34,7 +34,7 @@ export default function ImpressumPage() {
 
         <h2>Registereintrag &amp; Umsatzsteuer</h2>
         <p>
-          Registergericht, Registernummer und Umsatzsteuer-Identifikationsnummer:
+          Registergericht, Registernummer und Umsatzsteueridentifikationsnummer:
           Bitte hier die vollständigen Angaben des Unternehmens ergänzen.
         </p>
 
@@ -52,7 +52,7 @@ export default function ImpressumPage() {
         <h2>Streitschlichtung</h2>
         <p>
           Die Europäische Kommission stellt eine Plattform zur
-          Online-Streitbeilegung (OS) bereit:{" "}
+          Onlinestreitbeilegung (OS) bereit:{" "}
           <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer">
             https://ec.europa.eu/consumers/odr/
           </a>

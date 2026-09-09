@@ -107,7 +107,7 @@ export default function TestimonialSlider() {
     { dependencies: [index, perView] }
   );
 
-  // Auto-advance, pausiert bei Hover.
+  // Automatischer Wechsel, pausiert bei Hover.
   useEffect(() => {
     const el = trackRef.current?.closest(".testimonials");
     let paused = false;

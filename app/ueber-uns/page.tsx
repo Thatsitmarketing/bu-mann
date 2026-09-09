@@ -62,7 +62,7 @@ export default function UeberUnsPage() {
             <p className="lead lead--light">
               Was als Handwerksbetrieb begann, ist heute Ihr Partner für modernes
               Wohnen: Hausgeräte, Elektro, Heizung, Sanitär, Photovoltaik, Smart Home
-              und E-Mobilität, ehrlich beraten und meisterlich umgesetzt.
+              und Elektromobilität, ehrlich beraten und meisterlich umgesetzt.
             </p>
           </Reveal>
         </div>

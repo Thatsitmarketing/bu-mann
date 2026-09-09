@@ -31,7 +31,7 @@ const DEFAULT_MODULES: Module[] = [
     image: "/images/ai/module-pv.png",
   },
   {
-    title: "E-Mobilität",
+    title: "Elektromobilität",
     text: "Fachgerechte Wallboxinstallation, clever kombiniert mit Photovoltaik für günstiges Laden.",
     image: "/images/ai/module-emobility.png",
   },
@@ -42,7 +42,7 @@ const DEFAULT_MODULES: Module[] = [
   },
 ];
 
-/** Interaktives Modul-Raster mit Scroll-Reveal und Hover-Animation je Leistung. */
+/** Interaktives Modulraster mit Scrollreveal und Hoveranimation je Leistung. */
 export default function ServiceModules({ modules }: { modules?: Module[] }) {
   const root = useRef<HTMLDivElement>(null);
   const items = modules ?? DEFAULT_MODULES;

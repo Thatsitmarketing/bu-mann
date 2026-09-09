@@ -215,7 +215,7 @@ h1, h2, h3, h4 {
   padding-block: 0.9rem;
 }
 
-/* Transparenter Header über dunklem Bild-Hero: helle Schrift für Lesbarkeit. */
+/* Transparenter Header über dunklem Bildhero: helle Schrift für Lesbarkeit. */
 .header--over-dark .logo {
   color: var(--white);
 }
@@ -634,22 +634,14 @@ h1, h2, h3, h4 {
   width: auto;
   height: auto;
   object-fit: contain;
-  filter: grayscale(1);
-  opacity: 0.55;
-  mix-blend-mode: multiply;
-  transition: filter 0.3s ease, opacity 0.3s ease;
-}
-
-.marquee:hover .marquee__item img {
-  filter: grayscale(0);
+  /* Logos laufen immer in Originalfarbe, kein Graustufenfilter */
   opacity: 1;
+  mix-blend-mode: multiply;
+  transition: transform 0.3s ease;
 }
 
-@media (hover: none) {
-  .marquee__item img {
-    filter: grayscale(0);
-    opacity: 0.85;
-  }
+.marquee__item img:hover {
+  transform: scale(1.06);
 }
 
 
@@ -1557,7 +1549,7 @@ h1, h2, h3, h4 {
   }
 }
 
-/* Job-Detailseite */
+/* Jobdetailseite */
 
 .job-hero {
   padding-top: clamp(7rem, 13vw, 9.5rem);

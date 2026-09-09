@@ -14,7 +14,7 @@ const NAV = [
   { href: "/kontakt", label: "Kontakt" },
 ];
 
-// Seiten mit dunklem Bild-Hero: dort wird der transparente Header hell dargestellt.
+// Seiten mit dunklem Bildhero: dort wird der transparente Header hell dargestellt.
 const DARK_HERO_ROUTES = ["/hausgeraete", "/energietechnik", "/ueber-uns", "/karriere"];
 
 export default function Header() {
@@ -42,7 +42,7 @@ export default function Header() {
     };
   }, [open]);
 
-  // Menü auch mit der Escape-Taste schließen.
+  // Menü auch mit der Escapetaste schließen.
   useEffect(() => {
     if (!open) return;
     const onKey = (event: KeyboardEvent) => {
