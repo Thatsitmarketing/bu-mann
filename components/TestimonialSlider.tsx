@@ -144,7 +144,7 @@ export default function TestimonialSlider() {
             <div className="testimonials__score">
               <strong>4,9</strong>
               <span className="stars">★★★★★</span>
-              <small>Basierend auf 60+ Google-Rezensionen</small>
+              <small>Basierend auf 60+ Google Rezensionen</small>
             </div>
           </div>
         </Reveal>

@@ -14,7 +14,7 @@ export default function Footer() {
               </span>
             </Link>
             <p>
-              Ihr moderner Meisterbetrieb aus Sassenberg – für Hausgeräte, Elektro,
+              Ihr moderner Meisterbetrieb aus Sassenberg für Hausgeräte, Elektro,
               Heizung, Sanitär, Photovoltaik, Smart Home und E-Mobilität.
             </p>
           </div>

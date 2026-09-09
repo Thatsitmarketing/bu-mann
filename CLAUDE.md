@@ -43,8 +43,10 @@ lib/
   testimonials.ts             Google Bewertungen
 public/images/
   brands/                     Logos der Markenpartner
-  gallery/, photos/           echte Fotos
-  ai/                         KI generierte Motive
+  photos/                     echte Fotos (Team, Heizung, Sanitär, Kundendienst)
+  gallery/                    echte Referenzfotos (Bäder, Smart Home)
+  legacy/                     Scans von der alten Seite
+  ai/                         KI Illustrationen, nur noch für Modulkacheln
 ```
 
 ## Design
@@ -68,12 +70,29 @@ Sie haben den früheren Chat Assistenten ersetzt.
 - **Rot** `--red`: Hausgeräte, **02583 4664** (Verkauf und Kundendienst)
 - **Blau** `--navy`: Energietechnik, **02583 4318** (Elektro, Heizung, Sanitär)
 
+Im Ruhezustand ist nur der runde Hörer sichtbar, damit auf dem Smartphone
+nichts vom Inhalt verdeckt wird. Mit Maus fährt der Text beim Überfahren aus,
+auf Touchgeräten öffnet der erste Tipp das Widget und der zweite wählt. Das
+Ausfahren läuft rein über CSS: `.call-widget` ist ein Raster, dessen zweite
+Spalte von `0fr` auf `1fr` wächst (`:hover`, `:focus-visible`,
+`.call-widget--open`). Der Zustand `--open` kommt aus React und wird beim Tippen
+daneben oder beim Scrollen wieder zurückgesetzt.
+
 Rufnummern werden zentral im Array `LINES` gepflegt: `display` ist die
 sichtbare Schreibweise, `dial` die internationale Form für den `tel:` Link.
 Wird eine Nummer geändert, müssen auch `components/Footer.tsx`,
 `components/ContactSection.tsx`, `components/FaqSection.tsx` (Notdienst),
 `app/kontakt/page.tsx` (Metadaten) und `app/impressum/page.tsx` mitgezogen
 werden.
+
+### Header und mobiles Menü (`components/Header.tsx`)
+
+Ab 920 px Breite wird die Hauptnavigation durch den Burger ersetzt. Das
+Overlay `.mobile-nav` bringt oben das Logo und rechts daneben einen runden
+Schließen Button, darunter die Navigation und den CTA. Solange das Menü offen
+ist, wird der Burger ausgeblendet (`.header--nav-open`), Escape und jeder
+Menüpunkt schließen es. Das Overlay liegt über dem Header (`z-index` 105 zu
+100), deshalb braucht es das eigene Logo.
 
 ### Markenpartner Slider (`components/BrandMarquee.tsx`)
 
@@ -95,10 +114,48 @@ Datei mit gleichem Namen ersetzen, optische Größe über `scale` im Array
 > 150 px Breite vor und sollten bei Gelegenheit durch SVG oder größere PNG
 > ersetzt werden.
 
+### Bildmaterial
+
+Alle großen Motive sind echte Fotos aus dem Bestand des Kunden, keine KI
+Bilder. Zuordnung:
+
+| Platz | Datei |
+| --- | --- |
+| Startseite Hero | `photos/heizungsinstallation.jpg` (Ausschnitt `26% center`) |
+| Über uns Hero | `photos/gastherme-wartung.jpg` |
+| Energietechnik Hero | `photos/waermepumpe-beratung.jpg` |
+| Hausgeräte Hero | `photos/waermepumpe-wartung.jpg` |
+| Karriere Hero | `photos/team.jpg` |
+| Karriere Teaser | `photos/heizungsinstallation.jpg` |
+| Team Sektion | `photos/team.jpg` |
+| Referenzgalerie | `gallery/*` |
+
+Die Bildausschnitte sind bewusst gesetzt: In `heizungsinstallation.jpg` ist
+rechts die Arbeitskleidung eines fremden Betriebs zu sehen, deshalb steht die
+`background-position` dort auf `26% center`.
+
+Aus dem KI Ordner sind nur noch die zwölf Modulkacheln
+(`ai/module-*.png`, schlichte Strichillustrationen) und `ai/hero-elektriker.png`
+für die beiden Elektro Stellenanzeigen im Einsatz. Sobald echte Fotos für
+Elektroarbeiten und für die Sortimentskacheln vorliegen, werden sie ersetzt.
+
+> **Hinweis:** `bussmann-sassenberg.de` ist aus der Cloud Session nicht
+> erreichbar (Egress Policy). Neue Fotos von der alten Seite müssen lokal
+> heruntergeladen und ins Repository gelegt werden.
+
 ## Konventionen
 
 - Alle Texte auf Deutsch, Ansprache Sie (Karriereseiten duzen bewusst).
-- Keine Spiegelstriche und Bindestriche in Fließtexten.
+- Keine Spiegelstriche und Bindestriche in Fließtexten. Statt Gedankenstrich
+  wird umformuliert, aus Bereichen wird "von bis", aus Klammerformen wie
+  "Fort- und Weiterbildung" werden ausgeschriebene Wörter. Einzige Ausnahme:
+  wörtliche Kundenzitate in `lib/testimonials.ts` und feste Schreibweisen wie
+  E-Mobilität oder Kühl-Gefrier-Kombi.
+- Überschriften brauchen saubere Umbrüche: `text-wrap: balance` steht global
+  auf `h1` bis `h4`, Sektionsüberschriften bekommen die Klasse
+  `.section-title` (Breite und Abstand), keine Inline Styles mehr.
+- Jede Änderung am Layout auch bei 390 px prüfen. Die mobilen Abstände stehen
+  gesammelt im Block "Mobile Feinschliff" am Ende von `app/globals.css`.
 - Neue Sektionen bekommen eine Klasse im BEM Stil und ihren Block in
   `app/globals.css`, passend zur bestehenden Kommentarstruktur.
 - Animationen immer über `useGSAP` mit `scope`, damit sauber aufgeräumt wird.
@@ -135,3 +192,8 @@ und Preview gesetzt werden.
 - Kontaktformular und Bewerbungsformular sind clientseitig vorbereitet und
   noch nicht an einen Mailversand angebunden.
 - Originallogo Miele nachziehen (siehe oben).
+- Echte Fotos für Elektroarbeiten fehlen, deshalb steht bei den beiden
+  Elektro Stellenanzeigen noch `ai/hero-elektriker.png`.
+- Die zwölf Modulkacheln sind Illustrationen. Sobald echte Produkt- und
+  Anlagenfotos vorliegen, ersetzen und `.module-card__media` auf
+  `object-fit: cover` umstellen.

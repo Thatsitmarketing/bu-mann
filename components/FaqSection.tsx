@@ -6,11 +6,11 @@ import Reveal from "./Reveal";
 const FAQS = [
   {
     q: "Bietet Bußmann auch einen Notdienst an?",
-    a: "Ja. Für dringende Fälle in Elektro, Heizung und Sanitär erreichen Sie unseren Kunden- und Notdienst telefonisch unter 02583 4318. Für Hausgeräte gilt die 02583 4664.",
+    a: "Ja. Für dringende Fälle in Elektro, Heizung und Sanitär erreichen Sie unseren Kundendienst und Notdienst telefonisch unter 02583 4318. Für Hausgeräte gilt die 02583 4664.",
   },
   {
     q: "In welchem Gebiet sind Sie tätig?",
-    a: "Unser Schwerpunkt liegt in Sassenberg und dem Münsterland, größere Projekte realisieren wir auch darüber hinaus – sprechen Sie uns einfach an.",
+    a: "Unser Schwerpunkt liegt in Sassenberg und dem Münsterland, größere Projekte realisieren wir auch darüber hinaus. Sprechen Sie uns einfach an.",
   },
   {
     q: "Gibt es eine Förderung für Photovoltaik oder Wärmepumpen?",
@@ -18,11 +18,11 @@ const FAQS = [
   },
   {
     q: "Reparieren Sie auch Einbaugeräte anderer Marken?",
-    a: "Unser Kundendienst repariert Hausgeräte unabhängig vom Hersteller – auch bei bereits eingebauten Küchengeräten.",
+    a: "Unser Kundendienst repariert Hausgeräte unabhängig vom Hersteller, auch bei bereits eingebauten Küchengeräten.",
   },
   {
     q: "Wie lange dauert eine Badsanierung im Schnitt?",
-    a: "Je nach Umfang planen wir für eine komplette Badsanierung meist 2–3 Wochen reine Bauzeit – den genauen Zeitplan erhalten Sie in der Projektplanung.",
+    a: "Je nach Umfang planen wir für eine komplette Badsanierung meist 2 bis 3 Wochen reine Bauzeit. Den genauen Zeitplan erhalten Sie in der Projektplanung.",
   },
   {
     q: "Bieten Sie auch Ausbildungsplätze an?",

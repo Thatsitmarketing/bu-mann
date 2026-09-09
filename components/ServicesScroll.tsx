@@ -26,49 +26,49 @@ const SERVICES: Service[] = [
   {
     word: "Elektrotechnik.",
     title: "Elektroinstallationen",
-    text: "Von der Steckdose bis zur kompletten Gebäudeinstallation – modern geplant, sauber ausgeführt und sicher geprüft. Für Neubau, Sanierung und Industrie.",
+    text: "Von der Steckdose bis zur kompletten Gebäudeinstallation: modern geplant, sauber ausgeführt und sicher geprüft. Für Neubau, Sanierung und Industrie.",
     href: "/energietechnik",
     icon: <BoltIcon />,
   },
   {
     word: "Heizungstechnik.",
     title: "Heizung, Lüftung & Umweltenergien",
-    text: "Energieeffiziente Heizsysteme, Wärmepumpen und Solarthermie – detailgetreu geplant und fachgerecht installiert. Damit Sie warm und sparsam durch den Winter kommen.",
+    text: "Energieeffiziente Heizsysteme, Wärmepumpen und Solarthermie, detailgetreu geplant und fachgerecht installiert. Damit Sie warm und sparsam durch den Winter kommen.",
     href: "/energietechnik",
     icon: <FlameIcon />,
   },
   {
     word: "Sanitärtechnik.",
     title: "Sanitär & Bad",
-    text: "Vom tropfenden Hahn bis zum Wellness-Badezimmer: Wir realisieren Sanitärinstallationen, Hauswasserversorgung und Traumbäder – alles aus einer Hand.",
+    text: "Vom tropfenden Hahn bis zum Wellnessbadezimmer: Wir realisieren Sanitärinstallationen, Hauswasserversorgung und Traumbäder, alles aus einer Hand.",
     href: "/energietechnik",
     icon: <DropIcon />,
   },
   {
     word: "Photovoltaik.",
     title: "Photovoltaik & Speicher",
-    text: "Produzieren Sie Ihren eigenen Strom. Wir planen, montieren und warten Ihre PV-Anlage inklusive Speicher – für maximale Unabhängigkeit.",
+    text: "Produzieren Sie Ihren eigenen Strom. Wir planen, montieren und warten Ihre Photovoltaikanlage inklusive Speicher, für maximale Unabhängigkeit.",
     href: "/energietechnik",
     icon: <SunIcon />,
   },
   {
     word: "E-Mobilität.",
     title: "E-Mobilität & Wallboxen",
-    text: "Laden Sie Ihr E-Auto bequem zu Hause. Wir installieren Ihre Wallbox fachgerecht und binden sie auf Wunsch in Ihre PV-Anlage ein.",
+    text: "Laden Sie Ihr E-Auto bequem zu Hause. Wir installieren Ihre Wallbox fachgerecht und binden sie auf Wunsch in Ihre Photovoltaikanlage ein.",
     href: "/energietechnik",
     icon: <CarIcon />,
   },
   {
     word: "Smart Home.",
     title: "Smart Home mit KNX & Gira",
-    text: "Licht, Heizung, Jalousien und Sicherheit intelligent vernetzt. Wir machen Ihr Zuhause smart – herstellerunabhängig und zukunftssicher.",
+    text: "Licht, Heizung, Jalousien und Sicherheit intelligent vernetzt. Wir machen Ihr Zuhause smart, herstellerunabhängig und zukunftssicher.",
     href: "/energietechnik",
     icon: <HomeIcon />,
   },
   {
     word: "Hausgeräte.",
     title: "Hausgeräte: Verkauf & Reparatur",
-    text: "Energieeffiziente Markengeräte im Ausstellungsraum, Lieferung mit Einweisung, kostenlose Altgeräte-Entsorgung – und ein eigener Kundendienst, der wirklich kommt.",
+    text: "Energieeffiziente Markengeräte im Ausstellungsraum, Lieferung mit Einweisung, kostenlose Entsorgung der Altgeräte und ein eigener Kundendienst, der wirklich kommt.",
     href: "/hausgeraete",
     icon: <WashIcon />,
   },
@@ -117,7 +117,7 @@ export default function ServicesScroll() {
             </span>
           </h2>
           <p className="lead">
-            Ob großes oder kleines Projekt: Wir beraten, planen und realisieren –
+            Ob großes oder kleines Projekt: Wir beraten, planen und realisieren,
             mit eigenem Kundendienst und Notdienst, wenn es schnell gehen muss.
           </p>
         </div>

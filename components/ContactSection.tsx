@@ -21,7 +21,7 @@ export default function ContactSection({ id = "kontakt-formular" }: { id?: strin
           <p className="eyebrow">Kontakt</p>
           <h2 className="h2">Erzählen Sie uns von Ihrem Projekt.</h2>
           <p className="lead" style={{ marginTop: "1.2rem", marginBottom: "2.4rem" }}>
-            Ob neue Heizung, PV-Anlage oder defekte Waschmaschine – wir melden uns
+            Ob neue Heizung, Photovoltaikanlage oder defekte Waschmaschine. Wir melden uns
             schnellstmöglich bei Ihnen zurück. Versprochen.
           </p>
 
@@ -59,8 +59,8 @@ export default function ContactSection({ id = "kontakt-formular" }: { id?: strin
               <div>
                 <strong>Öffnungszeiten</strong>
                 <p>
-                  Mo, Di, Do, Fr: 9–12 &amp; 14:30–17 Uhr<br />
-                  Mi &amp; Sa: 9–12 Uhr
+                  Mo, Di, Do, Fr: 9 bis 12 und 14:30 bis 17 Uhr<br />
+                  Mi und Sa: 9 bis 12 Uhr
                 </p>
               </div>
             </div>
@@ -85,7 +85,7 @@ export default function ContactSection({ id = "kontakt-formular" }: { id?: strin
               <label htmlFor="topic">Anliegen*</label>
               <select id="topic" name="topic" required defaultValue="">
                 <option value="" disabled>Bitte wählen …</option>
-                <option>Hausgeräte – Kauf oder Reparatur</option>
+                <option>Hausgeräte: Kauf oder Reparatur</option>
                 <option>Elektroinstallation</option>
                 <option>Heizung / Wärmepumpe</option>
                 <option>Sanitär / Bad</option>
@@ -114,7 +114,7 @@ export default function ContactSection({ id = "kontakt-formular" }: { id?: strin
             </label>
             {sent ? (
               <p className="form__success" role="status">
-                Vielen Dank! Ihre Nachricht ist bei uns eingegangen – wir melden uns
+                Vielen Dank! Ihre Nachricht ist bei uns eingegangen. Wir melden uns
                 schnellstmöglich bei Ihnen.
               </p>
             ) : (

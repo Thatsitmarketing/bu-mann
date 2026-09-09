@@ -53,7 +53,7 @@ export default function Hero() {
       <div className="container">
         <div className="hero__grid">
           <div>
-            <p className="eyebrow">Meisterbetrieb für Haus- &amp; Energietechnik in Sassenberg</p>
+            <p className="eyebrow">Meisterbetrieb für Haus und Energietechnik in Sassenberg</p>
             <h1 className="display hero__title">
               <span className="line"><span>Alles aus einer Hand.</span></span>
               <span className="line"><span>Vom Hausgerät bis</span></span>
@@ -63,7 +63,7 @@ export default function Hero() {
 
           <div className="hero__aside">
             <p>
-              Elektro, Heizung, Sanitär, Photovoltaik und Hausgeräte – wir planen,
+              Elektro, Heizung, Sanitär, Photovoltaik und Hausgeräte. Wir planen,
               installieren und warten. Persönlich, meisterlich und aus der Region.
             </p>
             <div className="hero__cta-row">
@@ -87,13 +87,13 @@ export default function Hero() {
         <div className="hero__media">
           <div
             className="hero__media-inner"
-            style={{ backgroundImage: "url(/images/ai/hero-elektriker.png)" }}
+            style={{ backgroundImage: "url(/images/photos/heizungsinstallation.jpg)" }}
           />
           <div className="hero__media-scrim" />
           <div className="hero__media-badges">
             <p className="big">
-              Handwerk mit Zukunft –<br />
-              <em>seit Generationen in Sassenberg.</em>
+              Handwerk mit Zukunft.<br />
+              <em>Seit Generationen in Sassenberg.</em>
             </p>
             <div className="hero__badge-list">
               <span>Elektro</span>

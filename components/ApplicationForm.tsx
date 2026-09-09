@@ -6,7 +6,7 @@ import { ArrowRight } from "./Icons";
 import { JOBS } from "@/lib/jobs";
 
 type ApplicationFormProps = {
-  /** Vorausgewählte Stelle – wird bei Aufruf von einer Job-Detailseite übergeben. */
+  /** Vorausgewählte Stelle, wird bei Aufruf von einer Job-Detailseite übergeben. */
   jobTitle?: string;
 };
 

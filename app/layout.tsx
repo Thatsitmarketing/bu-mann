@@ -13,11 +13,11 @@ const manrope = Manrope({
 
 export const metadata: Metadata = {
   title: {
-    default: "Bußmann Sassenberg – Meisterbetrieb für Haus- & Energietechnik",
+    default: "Bußmann Sassenberg: Meisterbetrieb für Haus und Energietechnik",
     template: "%s | Bußmann Sassenberg",
   },
   description:
-    "Ihr moderner Meisterbetrieb aus Sassenberg: Hausgeräte, Elektro, Heizung, Sanitär, Photovoltaik, Smart Home und E-Mobilität – alles aus einer Hand.",
+    "Ihr moderner Meisterbetrieb aus Sassenberg: Hausgeräte, Elektro, Heizung, Sanitär, Photovoltaik, Smart Home und E-Mobilität, alles aus einer Hand.",
   icons: {
     icon: "/favicon.ico",
     apple: "/favicon.svg",

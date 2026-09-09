@@ -9,14 +9,14 @@ import { HomeIcon, WrenchIcon, PhoneIcon, PinIcon } from "@/components/Icons";
 export const metadata: Metadata = {
   title: "Über uns",
   description:
-    "Bußmann Sassenberg ist ein inhabergeführter Meisterbetrieb für Hausgeräte und Energietechnik – Elektro, Heizung, Sanitär, Photovoltaik und Smart Home aus einer Hand.",
+    "Bußmann Sassenberg ist ein inhabergeführter Meisterbetrieb für Hausgeräte und Energietechnik: Elektro, Heizung, Sanitär, Photovoltaik und Smart Home aus einer Hand.",
 };
 
 const VALUES = [
   {
     icon: <HomeIcon />,
     title: "Alles aus einer Hand",
-    text: "Elektro, Heizung, Sanitär, Photovoltaik, Smart Home und Hausgeräte – Sie brauchen nur einen Ansprechpartner statt fünf.",
+    text: "Elektro, Heizung, Sanitär, Photovoltaik, Smart Home und Hausgeräte: Sie brauchen nur einen Ansprechpartner statt fünf.",
   },
   {
     icon: <WrenchIcon />,
@@ -31,7 +31,7 @@ const VALUES = [
   {
     icon: <PinIcon />,
     title: "Regional verwurzelt",
-    text: "Wir sind aus Sassenberg für das Münsterland – mit kurzen Wegen, festen Gesichtern und echter Verbundenheit zur Region.",
+    text: "Wir sind aus Sassenberg für das Münsterland, mit kurzen Wegen, festen Gesichtern und echter Verbundenheit zur Region.",
   },
 ];
 
@@ -39,7 +39,7 @@ const STATS = [
   { value: "75+", label: "Jahre Handwerkstradition" },
   { value: "7", label: "Gewerke unter einem Dach" },
   { value: "10+", label: "starke Markenpartner" },
-  { value: "4,9★", label: "bei 60+ Google-Rezensionen" },
+  { value: "4,9★", label: "bei 60+ Google Rezensionen" },
 ];
 
 export default function UeberUnsPage() {
@@ -47,19 +47,22 @@ export default function UeberUnsPage() {
     <>
       <section
         className="page-hero page-hero--media"
-        style={{ backgroundImage: "url(/images/photos/heizungsinstallation.jpg)" }}
+        style={{
+          backgroundImage: "url(/images/photos/gastherme-wartung.jpg)",
+          backgroundPosition: "62% center",
+        }}
       >
         <div className="page-hero__overlay" />
         <div className="container page-hero__content">
           <Reveal>
             <p className="eyebrow eyebrow--light">Über uns</p>
             <h1 className="display display--light">
-              Ihr Meisterbetrieb aus Sassenberg – seit Generationen.
+              Ihr Meisterbetrieb aus Sassenberg. Seit Generationen.
             </h1>
             <p className="lead lead--light">
               Was als Handwerksbetrieb begann, ist heute Ihr Partner für modernes
               Wohnen: Hausgeräte, Elektro, Heizung, Sanitär, Photovoltaik, Smart Home
-              und E-Mobilität – ehrlich beraten und meisterlich umgesetzt.
+              und E-Mobilität, ehrlich beraten und meisterlich umgesetzt.
             </p>
           </Reveal>
         </div>
@@ -71,11 +74,11 @@ export default function UeberUnsPage() {
           <Reveal>
             <div className="about-story__text">
               <p className="eyebrow">Wer wir sind</p>
-              <h2 className="h2">Handwerk mit Handschlag-Qualität.</h2>
+              <h2 className="h2">Handwerk mit Handschlagqualität.</h2>
               <p>
                 Bußmann ist ein inhabergeführter Meisterbetrieb im Herzen von
-                Sassenberg. Bei uns bekommen Sie Haus- und Energietechnik aus einer
-                Hand – von der ersten Beratung über die detailgetreue Planung bis zur
+                Sassenberg. Bei uns bekommen Sie Haustechnik und Energietechnik aus
+                einer Hand, von der ersten Beratung über die detailgetreue Planung bis zur
                 fachgerechten Montage und Wartung.
               </p>
               <p>
@@ -85,8 +88,8 @@ export default function UeberUnsPage() {
                 Kundendienst und Notdienst.
               </p>
               <p>
-                Bei der Erdwärme arbeiten wir eng mit dem Brunnenbau-Meisterbetrieb
-                Hellweg zusammen – so kommt Ihre Erdwärmeheizung von der Bohrung bis
+                Bei der Erdwärme arbeiten wir eng mit dem Brunnenbaumeisterbetrieb
+                Hellweg zusammen. So kommt Ihre Erdwärmeheizung von der Bohrung bis
                 zur Installation aus einer Kooperation.
               </p>
             </div>
@@ -108,7 +111,7 @@ export default function UeberUnsPage() {
         <div className="container">
           <Reveal>
             <p className="eyebrow">Warum Bußmann</p>
-            <h2 className="h2" style={{ maxWidth: "20ch", marginBottom: "3rem" }}>
+            <h2 className="h2 section-title">
               Vier Gründe, uns zu vertrauen.
             </h2>
           </Reveal>
