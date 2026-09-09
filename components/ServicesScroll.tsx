@@ -126,7 +126,7 @@ export default function ServicesScroll() {
           {SERVICES.map((s) => (
             <article className="service-card" key={s.title}>
               <div className="service-card__icon">{s.icon}</div>
-              <div>
+              <div className="service-card__body">
                 <h3 className="h3">{s.title}</h3>
                 <p>{s.text}</p>
                 <Link href={s.href} className="btn btn--primary service-card__cta">

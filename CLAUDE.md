@@ -94,6 +94,14 @@ ist, wird der Burger ausgeblendet (`.header--nav-open`), Escape und jeder
 Menüpunkt schließen es. Das Overlay liegt über dem Header (`z-index` 105 zu
 100), deshalb braucht es das eigene Logo.
 
+### Leistungssektion (`components/ServicesScroll.tsx`)
+
+Links bleibt die Überschrift sticky stehen, rechts scrollen die Karten
+`.service-card` durch. Ab 920 px wird daraus eine Spalte. Ab 720 px dreht
+`.service-card` auf `flex-direction: row-reverse`: das Icon steht dann rechts,
+Überschrift, Text und Button stehen links. Der Textblock trägt dafür die
+Klasse `.service-card__body`.
+
 ### Markenpartner Slider (`components/BrandMarquee.tsx`)
 
 Endlos laufender Logoslider auf der Startseite. Die Liste ist doppelt
@@ -159,6 +167,11 @@ Elektroarbeiten und für die Sortimentskacheln vorliegen, werden sie ersetzt.
   Kundenzitate in `lib/testimonials.ts`, Eigennamen wie Nordrhein-Westfalen
   sowie technische Bezeichner (CSS Klassen, HTML Attribute, Dateinamen,
   Domains und Mailadressen).
+- Die Auszeichnung über einer Überschrift ist die Klasse `.eyebrow`. Sie
+  besteht nur aus Text, es gibt keine dekorativen Striche mehr davor oder
+  dahinter. `.eyebrow--center` zentriert, `.eyebrow--light` färbt für dunkle
+  Flächen um. Einzige Ausnahme ist die Auszeichnung über den Google
+  Bewertungen, sie bleibt eine Flexzeile, weil dort das Google Icon steht.
 - Überschriften brauchen saubere Umbrüche: `text-wrap: balance` steht global
   auf `h1` bis `h4`, Sektionsüberschriften bekommen die Klasse
   `.section-title` (Breite und Abstand), keine Inline Styles mehr.
