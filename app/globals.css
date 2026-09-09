@@ -72,9 +72,8 @@ button {
 /* ---------- Typografie ---------- */
 
 .eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
+  /* bewusst ohne dekorative Striche, nur Text */
+  display: block;
   color: var(--red);
   font-weight: 700;
   font-size: 1rem;
@@ -82,22 +81,8 @@ button {
   margin-bottom: 1.4rem;
 }
 
-.eyebrow::before {
-  content: "";
-  width: 2rem;
-  height: 2px;
-  background: var(--red);
-}
-
 .eyebrow--center {
-  justify-content: center;
-}
-
-.eyebrow--center::after {
-  content: "";
-  width: 2rem;
-  height: 2px;
-  background: var(--red);
+  text-align: center;
 }
 
 h1, h2, h3, h4 {
@@ -753,6 +738,26 @@ h1, h2, h3, h4 {
   .services-scroll__word span.is-active { display: block; }
 }
 
+/* Auf dem Smartphone steht das Icon rechts, Text und Button stehen links */
+@media (max-width: 720px) {
+  .service-card {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .service-card__body {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .service-card__icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+  }
+}
+
 /* ---------- Fade-Text CTA ---------- */
 
 .fade-cta {
@@ -1176,11 +1181,6 @@ h1, h2, h3, h4 {
 
 .eyebrow--light {
   color: #f0b3b6;
-}
-
-.eyebrow--light::before,
-.eyebrow--light::after {
-  background: #f0b3b6;
 }
 
 .display--light {
@@ -2011,6 +2011,9 @@ h1, h2, h3, h4 {
 }
 
 .testimonials__head .eyebrow {
+  /* enthält das Google Icon, deshalb hier als Flexzeile */
+  display: inline-flex;
+  align-items: center;
   gap: 0.5rem;
 }
 
