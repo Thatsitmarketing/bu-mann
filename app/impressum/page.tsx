@@ -22,7 +22,9 @@ export default function ImpressumPage() {
 
         <h2>Kontakt</h2>
         <p>
-          Telefon: 02583 4664
+          Telefon Hausgeräte: 02583 4664
+          <br />
+          Telefon Energietechnik: 02583 4318
           <br />
           E-Mail: info@bussmann-sassenberg.de
         </p>

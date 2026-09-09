@@ -29,8 +29,15 @@ export default function ContactSection({ id = "kontakt-formular" }: { id?: strin
             <div className="contact__info-item">
               <span className="ico"><PhoneIcon /></span>
               <div>
-                <strong>Telefon &amp; WhatsApp</strong>
-                <a href="tel:025834664">02583 4664</a>
+                <strong>Hausgeräte</strong>
+                <a href="tel:+4925834664">02583 4664</a>
+              </div>
+            </div>
+            <div className="contact__info-item">
+              <span className="ico"><PhoneIcon /></span>
+              <div>
+                <strong>Energietechnik</strong>
+                <a href="tel:+4925834318">02583 4318</a>
               </div>
             </div>
             <div className="contact__info-item">

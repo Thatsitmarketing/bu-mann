@@ -149,7 +149,7 @@ export default function KarrierePage() {
             </p>
             <p className="lead" style={{ marginTop: "1rem", fontSize: "1rem" }}>
               Fragen vorab? Ruf uns an unter{" "}
-              <a href="tel:025834664" style={{ color: "var(--red)", fontWeight: 700 }}>
+              <a href="tel:+4925834664" style={{ color: "var(--red)", fontWeight: 700 }}>
                 02583 4664
               </a>{" "}
               oder schreib an{" "}
