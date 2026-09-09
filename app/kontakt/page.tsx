@@ -14,10 +14,10 @@ export default function KontaktPage() {
       <section className="page-hero">
         <div className="container">
           <Reveal>
-            <p className="eyebrow">Kontakt</p>
+            <p className="eyebrow">So erreichen Sie uns</p>
             <h1 className="display">Sprechen wir über Ihr Projekt.</h1>
             <p className="lead">
-              Rufen Sie an, schreiben Sie uns oder kommen Sie einfach vorbei –
+              Rufen Sie an, schreiben Sie uns oder kommen Sie einfach vorbei.
               Parkplätze finden Sie direkt am Haus.
             </p>
           </Reveal>
@@ -36,11 +36,11 @@ export default function KontaktPage() {
                   <tbody>
                     <tr>
                       <td>Mo, Di, Do, Fr</td>
-                      <td>9:00 – 12:00 Uhr &amp; 14:30 – 17:00 Uhr</td>
+                      <td>9:00 bis 12:00 Uhr und 14:30 bis 17:00 Uhr</td>
                     </tr>
                     <tr>
                       <td>Mi &amp; Sa</td>
-                      <td>9:00 – 12:00 Uhr</td>
+                      <td>9:00 bis 12:00 Uhr</td>
                     </tr>
                   </tbody>
                 </table>
@@ -51,11 +51,11 @@ export default function KontaktPage() {
                   <tbody>
                     <tr>
                       <td>Mo, Di, Do, Fr</td>
-                      <td>8:00 – 12:00 Uhr &amp; 14:00 – 17:00 Uhr</td>
+                      <td>8:00 bis 12:00 Uhr und 14:00 bis 17:00 Uhr</td>
                     </tr>
                     <tr>
                       <td>Mi</td>
-                      <td>8:00 – 12:00 Uhr</td>
+                      <td>8:00 bis 12:00 Uhr</td>
                     </tr>
                   </tbody>
                 </table>

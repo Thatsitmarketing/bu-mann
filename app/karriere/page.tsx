@@ -8,7 +8,7 @@ import { JOBS, JOB_CATEGORIES } from "@/lib/jobs";
 export const metadata: Metadata = {
   title: "Karriere & Ausbildung",
   description:
-    "Jobs mit Zukunft beim Meisterbetrieb Bußmann in Sassenberg: offene Stellen in Elektro, Heizung, Sanitär und Hausgeräte-Service – plus Ausbildungsplätze.",
+    "Jobs mit Zukunft beim Meisterbetrieb Bußmann in Sassenberg: offene Stellen in Elektro, Heizung, Sanitär und Hausgeräteservice, dazu Ausbildungsplätze.",
 };
 
 const BENEFITS = [
@@ -25,12 +25,12 @@ const BENEFITS = [
   {
     icon: <SunIcon />,
     title: "Zukunftstechnik",
-    text: "Wärmepumpe, Photovoltaik und Smart Home statt Handwerk von gestern – du arbeitest an der Energiewende.",
+    text: "Wärmepumpe, Photovoltaik und Smart Home statt Handwerk von gestern. Du arbeitest an der Energiewende.",
   },
   {
     icon: <BoltIcon />,
     title: "Weiterbildung",
-    text: "Fort- und Weiterbildungen bis zum Meister – wir investieren in deine Entwicklung.",
+    text: "Fortbildungen und Weiterbildungen bis zum Meister. Wir investieren in deine Entwicklung.",
   },
   {
     icon: <ClockIcon />,
@@ -49,7 +49,10 @@ export default function KarrierePage() {
     <>
       <section
         className="page-hero page-hero--media"
-        style={{ backgroundImage: "url(/images/ai/karriere-bg.png)" }}
+        style={{
+          backgroundImage: "url(/images/photos/team.jpg)",
+          backgroundPosition: "center 30%",
+        }}
       >
         <div className="page-hero__overlay" />
         <div className="container page-hero__content">
@@ -58,7 +61,7 @@ export default function KarrierePage() {
             <h1 className="display display--light">Handwerk mit Zukunft. Team mit Herz.</h1>
             <p className="lead lead--light">
               Ob erfahrene Fachkraft, Quereinsteiger:in oder Azubi: Bei uns arbeitest
-              du an der Energiewende vor der eigenen Haustür – in einem
+              du an der Energiewende vor der eigenen Haustür, in einem
               Familienbetrieb, in dem man sich kennt und aufeinander verlässt.
             </p>
           </Reveal>
@@ -70,7 +73,7 @@ export default function KarrierePage() {
         <div className="container">
           <Reveal>
             <p className="eyebrow">Offene Stellen</p>
-            <h2 className="h2" style={{ maxWidth: "20ch", marginBottom: "2.5rem" }}>
+            <h2 className="h2 section-title">
               Finde deinen Platz in unserem Team.
             </h2>
           </Reveal>
@@ -117,7 +120,7 @@ export default function KarrierePage() {
         <div className="container">
           <Reveal>
             <p className="eyebrow eyebrow--center">Deine Vorteile</p>
-            <h2 className="h2" style={{ textAlign: "center", marginInline: "auto", maxWidth: "20ch" }}>
+            <h2 className="h2 section-title section-title--center">
               Darauf kannst du dich bei uns freuen.
             </h2>
           </Reveal>
@@ -144,8 +147,8 @@ export default function KarrierePage() {
             <p className="eyebrow">Jetzt bewerben</p>
             <h2 className="h2">Werde Teil unseres Teams.</h2>
             <p className="lead" style={{ marginTop: "1.2rem" }}>
-              Wähle einfach die passende Stelle aus und schick uns deine Bewerbung –
-              oder bewirb dich initiativ. Wir melden uns schnellstmöglich bei dir.
+              Wähle einfach die passende Stelle aus und schick uns deine Bewerbung.
+              Oder bewirb dich initiativ. Wir melden uns schnellstmöglich bei dir.
             </p>
             <p className="lead" style={{ marginTop: "1rem", fontSize: "1rem" }}>
               Fragen vorab? Ruf uns an unter{" "}

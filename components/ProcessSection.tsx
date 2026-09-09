@@ -8,7 +8,7 @@ const STEPS = [
   {
     n: "01",
     title: "Beratung",
-    text: "Wir hören zu, besichtigen vor Ort und beraten ehrlich – zu Technik, Kosten und Fördermöglichkeiten.",
+    text: "Wir hören zu, besichtigen vor Ort und beraten ehrlich zu Technik, Kosten und Fördermöglichkeiten.",
   },
   {
     n: "02",

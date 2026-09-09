@@ -16,7 +16,7 @@ export default function InitiativbewerbungPage() {
           <p className="eyebrow">Initiativbewerbung</p>
           <h1 className="display">Kein Angebot dabei? Bewirb dich trotzdem.</h1>
           <p className="lead" style={{ marginTop: "1.2rem" }}>
-            Wir wachsen ständig – erzähl uns, was du kannst, und wir schauen
+            Wir wachsen ständig. Erzähl uns, was du kannst, und wir schauen
             gemeinsam, wo du bei uns am besten passt.
           </p>
         </Reveal>

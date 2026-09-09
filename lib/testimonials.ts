@@ -6,7 +6,7 @@ export type Testimonial = {
   text: string;
 };
 
-/** Echte Google-Rezensionen von Bußmann Sassenberg. */
+/** Echte Google Rezensionen von Bußmann Sassenberg. */
 export const TESTIMONIALS: Testimonial[] = [
   {
     name: "Julian Reschke",

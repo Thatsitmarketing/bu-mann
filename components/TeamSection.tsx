@@ -5,12 +5,12 @@ import { gsap, useGSAP } from "@/lib/gsap";
 
 const TEAM = [
   { name: "Geschäftsführung", role: "Meisterbetrieb in Familienhand" },
-  { name: "Elektro-Team", role: "Elektroniker für Energie- & Gebäudetechnik" },
+  { name: "Elektroteam", role: "Elektroniker für Energie und Gebäudetechnik" },
   { name: "Heizung & Sanitär", role: "Anlagenmechaniker SHK" },
-  { name: "Hausgeräte-Service", role: "Kundendiensttechniker & Beratung" },
+  { name: "Hausgeräteservice", role: "Kundendiensttechniker und Beratung" },
   { name: "Planung & Projekte", role: "Projektleitung & Kalkulation" },
   { name: "Büro & Organisation", role: "Termine, Angebote & Abrechnung" },
-  { name: "Ausstellung", role: "Hausgeräte-Beratung vor Ort" },
+  { name: "Ausstellung", role: "Beratung zu Hausgeräten vor Ort" },
   { name: "Auszubildende", role: "Der Nachwuchs von morgen" },
 ];
 

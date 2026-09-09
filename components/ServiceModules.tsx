@@ -12,27 +12,27 @@ export type Module = {
 const DEFAULT_MODULES: Module[] = [
   {
     title: "Elektrotechnik",
-    text: "Gebäudeinstallationen für Neubau, Sanierung und Industrie – inklusive Kernbohrungen und Materialverkauf ab Lager.",
+    text: "Gebäudeinstallationen für Neubau, Sanierung und Industrie, inklusive Kernbohrungen und Materialverkauf ab Lager.",
     image: "/images/ai/module-elektro.png",
   },
   {
     title: "Heizung & Umweltenergien",
-    text: "Wärmepumpen, Brennwerttechnik und Solarthermie – detailgetreu geplant für maximale Effizienz.",
+    text: "Wärmepumpen, Brennwerttechnik und Solarthermie, detailgetreu geplant für maximale Effizienz.",
     image: "/images/ai/module-heizung.png",
   },
   {
     title: "Sanitär & Bad",
-    text: "Von der Reparatur bis zum Wellness-Bad mit Geberit, Hansgrohe und Kaldewei.",
+    text: "Von der Reparatur bis zum Wellnessbad mit Geberit, Hansgrohe und Kaldewei.",
     image: "/images/ai/module-sanitaer.png",
   },
   {
     title: "Photovoltaik & Speicher",
-    text: "Planung, Montage, Anmeldung und Wartung Ihrer PV-Anlage – auf Wunsch mit Batteriespeicher.",
+    text: "Planung, Montage, Anmeldung und Wartung Ihrer Photovoltaikanlage, auf Wunsch mit Batteriespeicher.",
     image: "/images/ai/module-pv.png",
   },
   {
     title: "E-Mobilität",
-    text: "Fachgerechte Wallbox-Installation, clever kombiniert mit Photovoltaik für günstiges Laden.",
+    text: "Fachgerechte Wallboxinstallation, clever kombiniert mit Photovoltaik für günstiges Laden.",
     image: "/images/ai/module-emobility.png",
   },
   {

@@ -1,12 +1,12 @@
 import Reveal from "./Reveal";
 
 const PHOTOS = [
-  { src: "/images/gallery/bad-waschtisch-03.jpg", alt: "Modernes Bad mit Waschtisch – Referenzprojekt" },
-  { src: "/images/gallery/bad-dusche-02.jpg", alt: "Begehbare Dusche mit Handtuchheizkörper – Referenzprojekt" },
-  { src: "/images/gallery/bad-wanne-01.jpg", alt: "Freistehende Badewanne – Referenzprojekt" },
-  { src: "/images/gallery/smarthome-gira-panel.jpg", alt: "Gira Smart-Home-Bedienpanel – Referenzprojekt" },
-  { src: "/images/gallery/bad-wc-02.jpg", alt: "Gäste-WC mit Dachschräge – Referenzprojekt" },
-  { src: "/images/gallery/bad-waschtisch-01.jpg", alt: "Aufsatzwaschbecken im Gästebad – Referenzprojekt" },
+  { src: "/images/gallery/bad-waschtisch-03.jpg", alt: "Referenzprojekt: modernes Bad mit Waschtisch" },
+  { src: "/images/gallery/bad-dusche-02.jpg", alt: "Referenzprojekt: begehbare Dusche mit Handtuchheizkörper" },
+  { src: "/images/gallery/bad-wanne-01.jpg", alt: "Referenzprojekt: freistehende Badewanne" },
+  { src: "/images/gallery/smarthome-gira-panel.jpg", alt: "Referenzprojekt: Bedienpanel von Gira für Smart Home" },
+  { src: "/images/gallery/bad-wc-02.jpg", alt: "Referenzprojekt: Gäste WC mit Dachschräge" },
+  { src: "/images/gallery/bad-waschtisch-01.jpg", alt: "Referenzprojekt: Aufsatzwaschbecken im Gästebad" },
 ];
 
 export default function ProjectGallery() {
@@ -15,7 +15,7 @@ export default function ProjectGallery() {
       <div className="container">
         <Reveal>
           <p className="eyebrow">Aus unseren Projekten</p>
-          <h2 className="h2" style={{ maxWidth: "18ch" }}>
+          <h2 className="h2 section-title">
             Echte Bäder. Echte Technik. Echte Handschrift.
           </h2>
         </Reveal>

@@ -12,7 +12,7 @@ type Brand = {
 
 /**
  * Markenpartner von bussmann-sassenberg.de.
- * Die Logodateien liegen unter /public/images/brands – zum Austauschen
+ * Die Logodateien liegen unter /public/images/brands, zum Austauschen
  * einfach die Datei mit gleichem Namen ersetzen.
  */
 const BRANDS: Brand[] = [
