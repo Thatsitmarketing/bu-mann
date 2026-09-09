@@ -43,7 +43,8 @@ export default function Footer() {
           <div>
             <h4>Kontakt</h4>
             <ul>
-              <li><a href="tel:025834664">02583 4664</a></li>
+              <li>Hausgeräte: <a href="tel:+4925834664">02583 4664</a></li>
+              <li>Energietechnik: <a href="tel:+4925834318">02583 4318</a></li>
               <li><a href="mailto:info@bussmann-sassenberg.de">info@bussmann-sassenberg.de</a></li>
               <li>Lappenbrink 29<br />48336 Sassenberg</li>
             </ul>

@@ -6,7 +6,7 @@ import Reveal from "./Reveal";
 const FAQS = [
   {
     q: "Bietet Bußmann auch einen Notdienst an?",
-    a: "Ja. Für dringende Fälle in Elektro, Heizung und Sanitär erreichen Sie unseren Kunden- und Notdienst telefonisch unter 02583 4664.",
+    a: "Ja. Für dringende Fälle in Elektro, Heizung und Sanitär erreichen Sie unseren Kunden- und Notdienst telefonisch unter 02583 4318. Für Hausgeräte gilt die 02583 4664.",
   },
   {
     q: "In welchem Gebiet sind Sie tätig?",

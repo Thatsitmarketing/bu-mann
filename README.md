@@ -5,7 +5,7 @@ Moderne, mehrseitige Homepage für den Meisterbetrieb Bußmann GmbH & Co. KG
 
 ## Seiten
 
-- `/` – Startseite (Hero, Leistungen mit Scroll-Effekt, Fade-Text-CTAs, Team, Kontaktformular)
+- `/` – Startseite (Hero, Markenpartner-Slider, Leistungen mit Scroll-Effekt, Bewertungen, Ablauf, FAQ, Kontaktformular)
 - `/hausgeraete` – Verkauf, Reparatur & Kundendienst
 - `/energietechnik` – Elektro, Heizung, Sanitär, Photovoltaik, E-Mobilität, Smart Home
 - `/karriere` – Offene Stellen & Ausbildung
@@ -17,7 +17,8 @@ Moderne, mehrseitige Homepage für den Meisterbetrieb Bußmann GmbH & Co. KG
 - Hero mit Zeilen-Reveal und Parallax-Fläche
 - Sticky-Leistungssektion: rotes Schlagwort wechselt beim Scrollen passend zur Karte
 - Fade-Text-CTAs: Großtext blendet Wort für Wort beim Scrollen ein (Scrub)
-- Marken-Marquee, animierte Zähler, Scroll-Reveals
+- Markenpartner-Slider mit echten Logos (Graustufen, Farbe beim Hover)
+- Scroll-Reveals
 
 ## Design
 
@@ -34,6 +35,13 @@ npm run build  # Produktions-Build
 
 Hinweis: Das Kontaktformular ist client-seitig vorbereitet und muss noch an
 einen Mail-Dienst bzw. ein Backend angebunden werden.
+
+## Anrufwidgets
+
+Unten rechts liegen zwei feste Anruf-Buttons (`components/CallWidgets.tsx`):
+rot für Hausgeräte (02583 4664), blau für Energietechnik (02583 4318).
+Sie haben den früheren Chat-Assistenten ersetzt. Die Rufnummern werden
+zentral im Array `LINES` gepflegt.
 
 ## Deployment (Cloudflare Pages)
 

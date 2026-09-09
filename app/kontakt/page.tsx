@@ -5,7 +5,7 @@ import ContactSection from "@/components/ContactSection";
 export const metadata: Metadata = {
   title: "Kontakt",
   description:
-    "Kontaktieren Sie Bußmann Sassenberg: Telefon 02583 4664, Lappenbrink 29, 48336 Sassenberg. Beratung zu Hausgeräten und Energietechnik.",
+    "Kontaktieren Sie Bußmann Sassenberg: Hausgeräte 02583 4664, Energietechnik 02583 4318, Lappenbrink 29, 48336 Sassenberg.",
 };
 
 export default function KontaktPage() {
