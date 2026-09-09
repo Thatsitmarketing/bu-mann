@@ -8,7 +8,7 @@ import ProjectGallery from "@/components/ProjectGallery";
 export const metadata: Metadata = {
   title: "Energietechnik: Elektro, Heizung, Sanitär und Photovoltaik",
   description:
-    "Elektroinstallationen, Heizungsbau, Sanitär, Photovoltaik, E-Mobilität und Smart Home: Energietechnik vom Meisterbetrieb Bußmann in Sassenberg.",
+    "Elektroinstallationen, Heizungsbau, Sanitär, Photovoltaik, Elektromobilität und Smart Home: Energietechnik vom Meisterbetrieb Bußmann in Sassenberg.",
 };
 
 export default function EnergietechnikPage() {

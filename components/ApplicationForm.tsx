@@ -6,7 +6,7 @@ import { ArrowRight } from "./Icons";
 import { JOBS } from "@/lib/jobs";
 
 type ApplicationFormProps = {
-  /** Vorausgewählte Stelle, wird bei Aufruf von einer Job-Detailseite übergeben. */
+  /** Vorausgewählte Stelle, wird bei Aufruf von einer Jobdetailseite übergeben. */
   jobTitle?: string;
 };
 
@@ -15,7 +15,7 @@ export default function ApplicationForm({ jobTitle }: ApplicationFormProps) {
 
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    // Hinweis: Hier später an ein Backend / einen Mail-Dienst anbinden.
+    // Hinweis: Hier später an ein Backend / einen Maildienst anbinden.
     setSent(true);
   }
 
@@ -37,7 +37,7 @@ export default function ApplicationForm({ jobTitle }: ApplicationFormProps) {
         <input id="app-name" name="name" type="text" required placeholder="Max Mustermann" />
       </div>
       <div className="form__field">
-        <label htmlFor="app-email">E-Mail*</label>
+        <label htmlFor="app-email">Mailadresse*</label>
         <input id="app-email" name="email" type="email" required placeholder="max@beispiel.de" />
       </div>
       <div className="form__field">

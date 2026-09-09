@@ -16,7 +16,7 @@ type FadeTextCTAProps = {
 
 /**
  * Großer Text, der beim Scrollen Wort für Wort einblendet (Scrub),
- * darunter ein zentrierter Call-to-Action.
+ * darunter ein zentrierter Handlungsaufruf.
  */
 export default function FadeTextCTA({
   words,

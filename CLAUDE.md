@@ -98,8 +98,11 @@ Menüpunkt schließen es. Das Overlay liegt über dem Header (`z-index` 105 zu
 
 Endlos laufender Logoslider auf der Startseite. Die Liste ist doppelt
 gerendert, GSAP schiebt den Track um `-50 %`, dadurch entsteht die nahtlose
-Schleife. Logos laufen in Graustufen und färben sich beim Hover ein.
-`prefers-reduced-motion` stoppt die Animation.
+Schleife. Logos laufen immer in ihrer Originalfarbe, es gibt keinen
+Graustufenfilter und keine reduzierte Deckkraft mehr. Beim Hover wächst das
+einzelne Logo leicht (`scale(1.06)`), `mix-blend-mode: multiply` blendet die
+weissen Kanten der JPG Logos aus. `prefers-reduced-motion` stoppt die
+Animation.
 
 Partner (Stand: von `bussmann-sassenberg.de` übernommen): Miele, Vaillant,
 Buderus, Gira, KNX, Zehnder, ABB, Geberit, hansgrohe, Kaldewei.
@@ -146,11 +149,16 @@ Elektroarbeiten und für die Sortimentskacheln vorliegen, werden sie ersetzt.
 ## Konventionen
 
 - Alle Texte auf Deutsch, Ansprache Sie (Karriereseiten duzen bewusst).
-- Keine Spiegelstriche und Bindestriche in Fließtexten. Statt Gedankenstrich
-  wird umformuliert, aus Bereichen wird "von bis", aus Klammerformen wie
-  "Fort- und Weiterbildung" werden ausgeschriebene Wörter. Einzige Ausnahme:
-  wörtliche Kundenzitate in `lib/testimonials.ts` und feste Schreibweisen wie
-  E-Mobilität oder Kühl-Gefrier-Kombi.
+- Keine Spiegelstriche und Bindestriche, weder in Fließtexten noch in
+  Überschriften, Formularlabels, Metadaten oder Kommentaren. Statt
+  Gedankenstrich wird umformuliert, aus Bereichen wird "von bis", aus
+  Klammerformen wie "Fort- und Weiterbildung" werden ausgeschriebene Wörter.
+  Feste Schreibweisen werden aufgelöst: aus E-Mobilität wird Elektromobilität,
+  aus E-Auto wird Elektroauto, aus E-Mail wird Mail oder Mailadresse, aus
+  Kühl-Gefrier-Kombi wird Kombigerät. Ausnahmen sind nur wörtliche
+  Kundenzitate in `lib/testimonials.ts`, Eigennamen wie Nordrhein-Westfalen
+  sowie technische Bezeichner (CSS Klassen, HTML Attribute, Dateinamen,
+  Domains und Mailadressen).
 - Überschriften brauchen saubere Umbrüche: `text-wrap: balance` steht global
   auf `h1` bis `h4`, Sektionsüberschriften bekommen die Klasse
   `.section-title` (Breite und Abstand), keine Inline Styles mehr.

@@ -19,7 +19,7 @@ const MODULES: Module[] = [
   },
   {
     title: "Kühlen & Gefrieren",
-    text: "Kühlschränke, Gefrierschränke und Kühl-Gefrier-Kombis in allen Größen: sparsam, leise und langlebig.",
+    text: "Kühlschränke, Gefrierschränke und Kombigeräte in allen Größen: sparsam, leise und langlebig.",
     image: "/images/ai/module-kuehlen.png",
   },
   {
